@@ -623,6 +623,13 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 		 'The right operand (if possible)')
 	<>- ((tExpression property: #binaryExpressionRightOwner) comment:
 			 'My Owner').
+			
+			"--- FOR STATEMENT RELATIONS ---"
+		(forStatement property: #initializer) <>- (tEntity property: #forInitializerOwner).
+		(forStatement property: #condition) <>- (tEntity property: #forConditionOwner).
+    	(forStatement property: #increment) <>- (tEntity property: #forIncrementOwner).
+    	(forStatement property: #body) <>- (tEntity property: #forBodyOwner).
+
 
 	((newExpression property: #constructor) comment:
 		 'The constructor of the new expression')
@@ -870,6 +877,10 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 	<>-
 		((tReturnType property: #functionDeclarationReturnTypeOwner)
 			 comment: 'My owner').
+			
+	
+		
+		
 
 	"class declaration"
 	((classDeclaration property: #body) comment: 'The body of the class')

@@ -5,6 +5,10 @@
 ### Parents
 | Relation | Origin | Opposite | Type | Comment |
 |---|
+| `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
+| `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |
+| `forIncrementOwner` | `FASTTEntity` | `increment` | `FASTTypeScriptForStatement` | |
+| `forInitializerOwner` | `FASTTEntity` | `initializer` | `FASTTypeScriptForStatement` | |
 | `parentLoopStatement` | `FASTTStatement` | `body` | `FASTTLoopStatement` | Optional loop of which this statement is the body|
 | `programClassDeclarationOwner` | `FASTTypeScriptClassDeclaration` | `classDeclarations` | `FASTTypeScriptProgram` | The program that contains me|
 | `statementContainer` | `FASTTStatement` | `statements` | `FASTTStatementBlock` | Block containing this statement.|

@@ -5,6 +5,10 @@
 ### Parents
 | Relation | Origin | Opposite | Type | Comment |
 |---|
+| `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
+| `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |
+| `forIncrementOwner` | `FASTTEntity` | `increment` | `FASTTypeScriptForStatement` | |
+| `forInitializerOwner` | `FASTTEntity` | `initializer` | `FASTTypeScriptForStatement` | |
 | `genericParent` | `FASTTypeScriptEntity` | `genericChildren` | `FASTTypeScriptEntity` | |
 | `valueParent` | `FASTTypeScriptEntity` | `value` | `FASTTypeScriptEntity` | |
 

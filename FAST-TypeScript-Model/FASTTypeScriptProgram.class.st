@@ -2,6 +2,14 @@
 ## Relations
 ======================
 
+### Parents
+| Relation | Origin | Opposite | Type | Comment |
+|---|
+| `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
+| `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |
+| `forIncrementOwner` | `FASTTEntity` | `increment` | `FASTTypeScriptForStatement` | |
+| `forInitializerOwner` | `FASTTEntity` | `initializer` | `FASTTypeScriptForStatement` | |
+
 ### Children
 | Relation | Origin | Opposite | Type | Comment |
 |---|
