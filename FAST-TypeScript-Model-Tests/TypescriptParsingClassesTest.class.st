@@ -342,6 +342,22 @@ TypeScriptParsingClassesTest >> testParsingForInStatement [
 ]
 
 { #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingForStatement [
+
+	| res string |
+ 
+	string := 'for (let i = 0; i < 10; i++) {
+  		  console.log(i);
+		}'.
+	res := parser parse: string.
+
+	self assert: (res allWithType: FASTTypeScriptForStatement) isNotEmpty. 
+	self assert: (res allWithType: FASTTypescriptFor_statement)  asArray first condition sourceCode equals: 'i < 10'.
+	self assert: (res allWithType: FASTTypescriptFor_statement)  asArray first increment sourceCode equals: 'i++'.
+	
+]
+
+{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingFunctionDeclaration [
 
 	| res string node |
