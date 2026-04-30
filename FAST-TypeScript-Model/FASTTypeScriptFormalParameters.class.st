@@ -10,6 +10,11 @@
 | `functionTypeParametersOwner` | `FASTTypeScriptFormalParameters` | `parameters` | `FASTTypeScriptFunctionType` | My owner|
 | `methodDefinitionParametersOwner` | `FASTTypeScriptFormalParameters` | `parameters` | `FASTTypeScriptMethodDefinition` | My owner|
 
+### Children
+| Relation | Origin | Opposite | Type | Comment |
+|---|
+| `parameters` | `FASTTypeScriptFormalParameters` | `parentFormalParameters` | `FASTTEntity` | The list of parameters|
+
 
 
 "
@@ -42,6 +47,12 @@ FASTTypeScriptFormalParameters class >> initialize [
 	self deprecatedAliases: { #FASTTypescriptFormal_parameters }
  
  
+]
+
+{ #category : 'adding' }
+FASTTypeScriptFormalParameters >> addParameter: anObject [
+	<generated>
+	^ self parameters add: anObject
 ]
 
 { #category : 'accessing' }
@@ -142,4 +153,29 @@ FASTTypeScriptFormalParameters >> methodDefinitionParametersOwnerGroup [
 	<generated>
 	<navigation: 'MethodDefinitionParametersOwner'>
 	^ MooseSpecializedGroup with: self methodDefinitionParametersOwner
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptFormalParameters >> parameters [
+	"Relation named: #parameters type: #FASTTEntity opposite: #parentFormalParameters"
+
+	<generated>
+	<FMComment: 'The list of parameters'>
+	<derived>
+	<FMProperty: #parameters type: #FASTTEntity opposite: #parentFormalParameters>
+	^ self attributeAt: #parameters ifAbsentPut: [ FMMultivalueLink on: self opposite: #parentFormalParameters: ]
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptFormalParameters >> parameters: anObject [
+
+	<generated>
+	self parameters value: anObject
+]
+
+{ #category : 'navigation' }
+FASTTypeScriptFormalParameters >> parametersGroup [
+	<generated>
+	<navigation: 'Parameters'>
+	^ MooseSpecializedGroup withAll: self parameters asSet
 ]

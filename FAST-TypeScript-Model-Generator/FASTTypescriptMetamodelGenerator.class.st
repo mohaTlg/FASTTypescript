@@ -922,7 +922,24 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 
 	((tWithModifiers property: #modifiers) comment: 'My modifiers')
 	<>-* ((tModifier property: #tWithModifiersModifiersOwner) comment:
-			 'The owner of the modifier')
+			 'The owner of the modifier').
+			
+	"-----------------------"
+	((arrowFunction property: #parameter) comment: 'The single parameter of the arrow function') 
+		<>- ((tEntity property: #arrowFunctionParameterOwner) comment: 'My owner').
+		
+	((arrowFunction property: #parameters) comment: 'The parameters of the arrow function') 
+		<>- ((tEntity property: #arrowFunctionParametersOwner) comment: 'My owner').
+		
+	((arrowFunction property: #body) comment: 'The body of the arrow function') 
+		<>- ((tEntity property: #arrowFunctionBodyOwner) comment: 'My owner').
+		
+	((formalParameters property: #parameters) comment: 'The list of parameters') 
+		<>-* ((tEntity property: #parentFormalParameters) comment: 'My owner').
+		
+	
+	(whileStatement property: #condition) <>- (tEntity property: #whileConditionOwner).
+	(whileStatement property: #body) <>- (tEntity property: #whileBodyOwner).
 ]
 
 { #category : 'definition' }
