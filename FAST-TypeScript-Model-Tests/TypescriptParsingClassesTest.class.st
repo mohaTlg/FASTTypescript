@@ -24,25 +24,6 @@ TypeScriptParsingClassesTest >> tearDown [
 ]
 
 { #category : 'tests' }
-TypeScriptParsingClassesTest >> testParseWhileStatement [
-
-    | ast whileNode |
-    
-    ast := FASTTypeScriptParser new parse: 'while (x < 10) { console.log("hello"); x++; }'.
-    
-    
-    whileNode := (ast allWithType: FASTTypeScriptWhileStatement) first.
-    
-
-    self assert: whileNode isNotNil.
-    self assert: whileNode condition isNotNil.
-    self assert: whileNode body isNotNil.
-    
-   
-    self assert: whileNode condition sourceCode equals: '(x < 10)'.
-]
-
-{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingArray [
 
 	| res string  |
@@ -1043,6 +1024,25 @@ const lines = new Array<DiffLine>();'.
 	
 	nodeFifth := (res allWithType: FASTTypeScriptVariableDeclarator) fifth. 
 	self assert: nodeFifth value class equals: FASTTypeScriptNewExpression. "
+]
+
+{ #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingWhileStatement [
+
+    | ast whileNode |
+    
+    ast := FASTTypeScriptParser new parse: 'while (x < 10) { console.log("hello"); x++; }'.
+    
+    
+    whileNode := (ast allWithType: FASTTypeScriptWhileStatement) first.
+    
+
+    self assert: whileNode isNotNil.
+    self assert: whileNode condition isNotNil.
+    self assert: whileNode body isNotNil.
+    
+   
+    self assert: whileNode condition sourceCode equals: '(x < 10)'.
 ]
 
 { #category : 'tests' }
