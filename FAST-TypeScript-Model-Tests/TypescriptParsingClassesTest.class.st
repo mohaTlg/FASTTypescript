@@ -472,8 +472,9 @@ TypeScriptParsingClassesTest >> testParsingIfStatement [
 	| res string node |
  
 	string := 'if ( foo ) {
-	set[ 1 ].apply()
-}'.
+	set[ 1 ].apply();
+	}else {
+	console.log("hello");}'.
 	res := parser parse: string.
 
 	"Checking if FASTTypescriptIf_statement parsed correctly"
@@ -484,6 +485,7 @@ TypeScriptParsingClassesTest >> testParsingIfStatement [
 	node := (res allWithType: FASTTypescriptIf_statement) first.
 	self assert: node condition class equals: FASTTypescriptParenthesized_expression.
 	self assert: node consequence class equals: FASTTypescriptStatement_block .
+	self assert: node alternative class equals: FASTTypeScriptElseClause .
 ]
 
 { #category : 'tests' }

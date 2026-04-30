@@ -937,6 +937,9 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 	((formalParameters property: #parameters) comment: 'The list of parameters') 
 		<>-* ((tEntity property: #parentFormalParameters) comment: 'My owner').
 		
+	(ifStatement property: #alternative) <>- (elseClause property: #ifStatementAlternativeOwner ).
+
+		
 	
 	(whileStatement property: #condition) <>- (tEntity property: #whileConditionOwner).
 	(whileStatement property: #body) <>- (tEntity property: #whileBodyOwner).
