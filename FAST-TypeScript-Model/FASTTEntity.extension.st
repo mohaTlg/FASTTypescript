@@ -82,6 +82,58 @@ FASTTEntity >> arrowFunctionParametersOwner: anObject [
 ]
 
 { #category : '*FAST-TypeScript-Model-accessing' }
+FASTTEntity >> doBodyOwner [
+	"Relation named: #doBodyOwner type: #FASTTypeScriptDoStatement opposite: #body"
+
+	<generated>
+	<container>
+	<derived>
+	<FMProperty: #doBodyOwner type: #FASTTypeScriptDoStatement opposite: #body>
+	<package: #'FAST-TypeScript-Model'>
+	^ self attributeAt: #doBodyOwner ifAbsent: [ nil ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTEntity >> doBodyOwner: anObject [
+
+	<generated>
+	(self attributeAt: #doBodyOwner ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
+	anObject ifNil: [ | otherSide |
+		otherSide :=  self doBodyOwner.
+		self attributeAt: #doBodyOwner put: anObject.
+		otherSide body: nil ]
+	ifNotNil: [ 
+		self attributeAt: #doBodyOwner put: anObject.
+		anObject body: self ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTEntity >> doConditionOwner [
+	"Relation named: #doConditionOwner type: #FASTTypeScriptDoStatement opposite: #condition"
+
+	<generated>
+	<container>
+	<derived>
+	<FMProperty: #doConditionOwner type: #FASTTypeScriptDoStatement opposite: #condition>
+	<package: #'FAST-TypeScript-Model'>
+	^ self attributeAt: #doConditionOwner ifAbsent: [ nil ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTEntity >> doConditionOwner: anObject [
+
+	<generated>
+	(self attributeAt: #doConditionOwner ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
+	anObject ifNil: [ | otherSide |
+		otherSide :=  self doConditionOwner.
+		self attributeAt: #doConditionOwner put: anObject.
+		otherSide condition: nil ]
+	ifNotNil: [ 
+		self attributeAt: #doConditionOwner put: anObject.
+		anObject condition: self ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
 FASTTEntity >> forBodyOwner [
 	"Relation named: #forBodyOwner type: #FASTTypeScriptForStatement opposite: #body"
 

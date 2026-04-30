@@ -234,6 +234,20 @@ TypeScriptParsingClassesTest >> testParsingConstructorType [
 ]
 
 { #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingDoStatement [
+
+	| res string |
+ 
+	string := 'do { x++; } while (x < 10);'.
+	res := parser parse: string.
+
+	self assert: (res allWithType: FASTTypeScriptDoStatement ) isNotEmpty. 
+	self assert: (res allWithType: FASTTypeScriptDoStatement )  asArray first condition sourceCode equals: '(x < 10)'.
+	self assert: (res allWithType: FASTTypeScriptDoStatement)  asArray first body sourceCode equals: '{ x++; }'.
+	
+]
+
+{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingEmptyStatement [
 
 	| res string  |

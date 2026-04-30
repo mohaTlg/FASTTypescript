@@ -936,6 +936,11 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 		
 	((formalParameters property: #parameters) comment: 'The list of parameters') 
 		<>-* ((tEntity property: #parentFormalParameters) comment: 'My owner').
+
+	"DoStatement"	
+		(doStatement property: #condition) <>- (tEntity property: #doConditionOwner).
+		(doStatement property: #body) <>- (tEntity property: #doBodyOwner).
+			
 		
 	(ifStatement property: #alternative) <>- (elseClause property: #ifStatementAlternativeOwner ).
 
