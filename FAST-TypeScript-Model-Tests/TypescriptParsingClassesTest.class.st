@@ -395,6 +395,24 @@ TypeScriptParsingClassesTest >> testParsingForStatement [
 ]
 
 { #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingFormalParameters [
+
+	| res string node| 
+
+	string := '(x, y) => { return x + y; };'.
+		
+	res := parser parse: string.
+
+	self assert:
+		(res allWithType: FASTTypeScriptFormalParameters ) isNotEmpty.
+	
+	node := (res allWithType: FASTTypeScriptFormalParameters ) first.
+	
+	self assert: node parameters first sourceCode equals: 'x'.
+	
+]
+
+{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingFunctionDeclaration [
 
 	| res string node |
