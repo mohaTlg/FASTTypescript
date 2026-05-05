@@ -801,6 +801,25 @@ type t = readonly (readonly a[]) []'.
 ]
 
 { #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingRequiredParameter [
+
+	| res string node| 
+
+	string := '(x:number, y) => { return x + y; };'.
+		
+	res := parser parse: string.
+
+	self assert:
+		(res allWithType: FASTTypeScriptRequiredParameter ) isNotEmpty.
+	
+	node := (res allWithType: FASTTypeScriptRequiredParameter ) first.
+	
+	self assert: node pattern sourceCode equals: 'x'.
+	self assert: node type sourceCode equals: ':number'.
+	
+]
+
+{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingReturnStatement [
 
 	| res string |

@@ -46,6 +46,8 @@
 | `parentExpressionLeft` | `FASTTExpression` | `leftOperand` | `FASTTBinaryExpression` | Parent (binary) expression of which I am left side|
 | `parentExpressionRight` | `FASTTExpression` | `rightOperand` | `FASTTBinaryExpression` | Parent (binary) expression of which I am right side|
 | `parentFormalParameters` | `FASTTEntity` | `parameters` | `FASTTypeScriptFormalParameters` | My owner|
+| `requiredParameterPatternOwner` | `FASTTypeScriptIdentifier` | `pattern` | `FASTTypeScriptRequiredParameter` | |
+| `requiredParameterTypeOwner` | `FASTTypeScriptTOptionalField` | `type` | `FASTTypeScriptRequiredParameter` | |
 | `returnOwner` | `FASTTExpression` | `expression` | `FASTTReturnStatement` | The return statement that own the expression (if it's the case)|
 | `subscriptExpressionIndexOwner` | `FASTTExpression` | `index` | `FASTTypeScriptSubscriptExpression` | My owner|
 | `subscriptExpressionObjectOwner` | `FASTTExpression` | `object` | `FASTTypeScriptSubscriptExpression` | My owner|
@@ -74,7 +76,8 @@ Class {
 		'#functionDeclarationNameOwner => FMOne type: #FASTTypeScriptFunctionDeclaration opposite: #name',
 		'#indexSignatureNameOwner => FMOne type: #FASTTypeScriptIndexSignature opposite: #name',
 		'#nestedIdentifierObjectOwner => FMOne type: #FASTTypeScriptNestedIdentifier opposite: #object',
-		'#optionalParameterPatternOwner => FMOne type: #FASTTypeScriptOptionalParameter opposite: #pattern'
+		'#optionalParameterPatternOwner => FMOne type: #FASTTypeScriptOptionalParameter opposite: #pattern',
+		'#requiredParameterPatternOwner => FMOne type: #FASTTypeScriptRequiredParameter opposite: #pattern'
 	],
 	#category : 'FAST-TypeScript-Model-Entities',
 	#package : 'FAST-TypeScript-Model',
@@ -244,4 +247,28 @@ FASTTypeScriptIdentifier >> optionalParameterPatternOwnerGroup [
 	<generated>
 	<navigation: 'OptionalParameterPatternOwner'>
 	^ MooseSpecializedGroup with: self optionalParameterPatternOwner
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptIdentifier >> requiredParameterPatternOwner [
+	"Relation named: #requiredParameterPatternOwner type: #FASTTypeScriptRequiredParameter opposite: #pattern"
+
+	<generated>
+	<container>
+	<derived>
+	^ requiredParameterPatternOwner
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptIdentifier >> requiredParameterPatternOwner: anObject [
+
+	<generated>
+	requiredParameterPatternOwner := anObject
+]
+
+{ #category : 'navigation' }
+FASTTypeScriptIdentifier >> requiredParameterPatternOwnerGroup [
+	<generated>
+	<navigation: 'RequiredParameterPatternOwner'>
+	^ MooseSpecializedGroup with: self requiredParameterPatternOwner
 ]

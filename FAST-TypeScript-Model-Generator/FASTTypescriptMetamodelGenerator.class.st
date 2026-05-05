@@ -943,7 +943,12 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 			
 		
 	(ifStatement property: #alternative) <>- (elseClause property: #ifStatementAlternativeOwner ).
-
+	
+	"RequiredParameter"
+	((requiredParameter property: #pattern) comment: 'The pattern (the name) of the required parameter') 
+		<>- (identifier property: #requiredParameterPatternOwner ).
+	((requiredParameter property: #type) comment: 'The type of the parameter (optional)') 
+		<>- (tOptionalField property: #requiredParameterTypeOwner  ).
 		
 	
 	(whileStatement property: #condition) <>- (tEntity property: #whileConditionOwner).
