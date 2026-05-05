@@ -25,6 +25,7 @@
 | `enumDeclarationNameOwner` | `FASTTypeScriptIdentifier` | `name` | `FASTTypeScriptEnumDeclaration` | My owner|
 | `exportSpecifierAliasOwner` | `FASTTypeScriptTOptionalField` | `alias` | `FASTTypeScriptExportSpecifier` | My owner|
 | `exportSpecifierNameOwner` | `FASTTypeScriptIdentifier` | `name` | `FASTTypeScriptExportSpecifier` | My owner|
+| `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTypeScriptExpressionStatement` | |
 | `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTExpressionStatement` | The expression statement that own me (if it's the case|
 | `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
 | `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |

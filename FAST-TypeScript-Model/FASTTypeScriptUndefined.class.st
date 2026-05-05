@@ -22,6 +22,7 @@
 | `conditionalTypeRightOwner` | `FASTTExpression` | `right` | `FASTTypeScriptConditionalType` | The right operand (if possible)|
 | `doBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptDoStatement` | |
 | `doConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptDoStatement` | |
+| `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTypeScriptExpressionStatement` | |
 | `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTExpressionStatement` | The expression statement that own me (if it's the case|
 | `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
 | `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |

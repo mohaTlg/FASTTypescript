@@ -24,6 +24,7 @@
 | `constructorTypeTypeOwner` | `FASTTypeScriptTypeIdentifier` | `type` | `FASTTypeScriptConstructorType` | The owner of this type identifier|
 | `doBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptDoStatement` | |
 | `doConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptDoStatement` | |
+| `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTypeScriptExpressionStatement` | |
 | `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTExpressionStatement` | The expression statement that own me (if it's the case|
 | `extendsTypeClauseTypeOwner` | `FASTTypeScriptTypeIdentifier` | `type` | `FASTTypeScriptExtendsTypeClause` | The owner of this type identifier|
 | `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |

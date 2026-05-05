@@ -177,6 +177,13 @@ FASTTypeScriptEntity >> isExpression [
 ]
 
 { #category : 'testing' }
+FASTTypeScriptEntity >> isExpressionStatement [
+
+	<generated>
+	^ false
+]
+
+{ #category : 'testing' }
 FASTTypeScriptEntity >> isLiteral [
 
 	<generated>

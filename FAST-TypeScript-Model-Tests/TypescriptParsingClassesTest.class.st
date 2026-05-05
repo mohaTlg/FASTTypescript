@@ -285,6 +285,24 @@ export type {A as B } from ''mymodule'';'.
 ]
 
 { #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingExpressionStatement [
+
+	| res string node| 
+
+	string := 'x = 5'.
+		
+	res := parser parse: string.
+
+	self assert:
+		(res allWithType: FASTTypeScriptExpressionStatement ) isNotEmpty.
+	
+	node := (res allWithType: FASTTypeScriptExpressionStatement ) first.
+	
+	self assert: node expression sourceCode equals: 'x = 5'.
+	
+]
+
+{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingExtendsClause [
 
 	| res string node node2 |

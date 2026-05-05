@@ -11,8 +11,10 @@ FASTTypeScriptCustomImporter >> visitNode: aTSNode [
     
     aFASTEntity := super visitNode: aTSNode.
 
+	aFASTEntity ifNil: [ ^ nil ].
+
     " Intercept the specific case of formal parameters to fix unnamed children"
-    (aFASTEntity isNotNil and: [ aTSNode type = 'formal_parameters' ]) ifTrue: [ 
+     aTSNode type = 'formal_parameters' ifTrue: [ 
         | childrenToCopy |
         
         "Take a snapshot of the children to avoid modifying the collection while iterating over it"
@@ -28,6 +30,20 @@ FASTTypeScriptCustomImporter >> visitNode: aTSNode [
             child parentFormalParameters: aFASTEntity. 
         ].
     ].
+
+
+	aTSNode type = 'expression_statement' ifTrue: [ 
+		| childrenToCopy |
+		 childrenToCopy := aFASTEntity genericChildren asArray.
+		aFASTEntity genericChildren removeAll.
+		
+		childrenToCopy do: [ :child |
+			"Verify if the child is a valid expression not an Error"
+			(child respondsTo: #expressionStatementOwner:) 
+			ifTrue: [ aFASTEntity expression: child .]
+			ifFalse: [ aFASTEntity addGenericChild: child ]
+		]
+		].
 
     ^ aFASTEntity
 ]

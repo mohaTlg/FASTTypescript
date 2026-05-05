@@ -568,6 +568,7 @@ FASTTypeScriptMetamodelGenerator >> defineHierarchy [
 	statementBlock --|> statement.
 	continueStatement --|> statement.
 	expressionStatement --|> statement.
+	expressionStatement --|> #TExpressionStatement .
 	whileStatement --|> statement.
 
 	typePredicateAnnotation --|> typeAnnotation
@@ -934,13 +935,17 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 	((arrowFunction property: #body) comment: 'The body of the arrow function') 
 		<>- ((tEntity property: #arrowFunctionBodyOwner) comment: 'My owner').
 		
-	((formalParameters property: #parameters) comment: 'The list of parameters') 
-		<>-* ((tEntity property: #parentFormalParameters) comment: 'My owner').
 
 	"DoStatement"	
 		(doStatement property: #condition) <>- (tEntity property: #doConditionOwner).
 		(doStatement property: #body) <>- (tEntity property: #doBodyOwner).
 			
+	"ExpressionStatement"
+	((expressionStatement property: #expression) comment: 'The expression contained in the statement')
+		<>- (tExpression property: #expressionStatementOwner ).
+		
+	((formalParameters property: #parameters) comment: 'The list of parameters') 
+		<>-* ((tEntity property: #parentFormalParameters) comment: 'My owner').
 		
 	(ifStatement property: #alternative) <>- (elseClause property: #ifStatementAlternativeOwner ).
 	
@@ -949,7 +954,6 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 		<>- (identifier property: #requiredParameterPatternOwner ).
 	((requiredParameter property: #type) comment: 'The type of the parameter (optional)') 
 		<>- (tOptionalField property: #requiredParameterTypeOwner  ).
-		
 	
 	(whileStatement property: #condition) <>- (tEntity property: #whileConditionOwner).
 	(whileStatement property: #body) <>- (tEntity property: #whileBodyOwner).

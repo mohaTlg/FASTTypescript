@@ -23,6 +23,7 @@
 | `doBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptDoStatement` | |
 | `doConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptDoStatement` | |
 | `exportSpecifierAliasOwner` | `FASTTypeScriptTOptionalField` | `alias` | `FASTTypeScriptExportSpecifier` | My owner|
+| `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTypeScriptExpressionStatement` | |
 | `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTExpressionStatement` | The expression statement that own me (if it's the case|
 | `extendsClauseTypeArgumentsOwner` | `FASTTypeScriptTypeArguments` | `type_arguments` | `FASTTypeScriptExtendsClause` | My owner|
 | `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
