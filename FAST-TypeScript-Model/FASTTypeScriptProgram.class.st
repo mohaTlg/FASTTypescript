@@ -6,17 +6,7 @@
 | Relation | Origin | Opposite | Type | Comment |
 |---|
 | `arrowFunctionBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptArrowFunction` | My owner|
-| `arrowFunctionParameterOwner` | `FASTTEntity` | `parameter` | `FASTTypeScriptArrowFunction` | My owner|
-| `arrowFunctionParametersOwner` | `FASTTEntity` | `parameters` | `FASTTypeScriptArrowFunction` | My owner|
-| `doBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptDoStatement` | |
-| `doConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptDoStatement` | |
-| `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
-| `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |
-| `forIncrementOwner` | `FASTTEntity` | `increment` | `FASTTypeScriptForStatement` | |
-| `forInitializerOwner` | `FASTTEntity` | `initializer` | `FASTTypeScriptForStatement` | |
 | `parentFormalParameters` | `FASTTEntity` | `parameters` | `FASTTypeScriptFormalParameters` | My owner|
-| `whileBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptWhileStatement` | |
-| `whileConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptWhileStatement` | |
 
 ### Children
 | Relation | Origin | Opposite | Type | Comment |

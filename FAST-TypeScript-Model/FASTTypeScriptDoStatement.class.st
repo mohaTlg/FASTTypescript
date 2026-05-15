@@ -5,8 +5,8 @@
 ### Children
 | Relation | Origin | Opposite | Type | Comment |
 |---|
-| `body` | `FASTTypeScriptDoStatement` | `doBodyOwner` | `FASTTEntity` | |
-| `condition` | `FASTTypeScriptDoStatement` | `doConditionOwner` | `FASTTEntity` | |
+| `body` | `FASTTypeScriptDoStatement` | `doBodyOwner` | `FASTTStatement` | |
+| `condition` | `FASTTypeScriptDoStatement` | `doConditionOwner` | `FASTTypeScriptParenthesizedExpression` | |
 
 
 
@@ -14,6 +14,9 @@
 Class {
 	#name : 'FASTTypeScriptDoStatement',
 	#superclass : 'FASTTypeScriptStatement',
+	#instVars : [
+		'#condition => FMOne type: #FASTTypeScriptParenthesizedExpression opposite: #doConditionOwner'
+	],
 	#category : 'FAST-TypeScript-Model-Entities',
 	#package : 'FAST-TypeScript-Model',
 	#tag : 'Entities'
@@ -38,10 +41,10 @@ FASTTypeScriptDoStatement class >> initialize [
 
 { #category : 'accessing' }
 FASTTypeScriptDoStatement >> body [
-	"Relation named: #body type: #FASTTEntity opposite: #doBodyOwner"
+	"Relation named: #body type: #FASTTStatement opposite: #doBodyOwner"
 
 	<generated>
-	<FMProperty: #body type: #FASTTEntity opposite: #doBodyOwner>
+	<FMProperty: #body type: #FASTTStatement opposite: #doBodyOwner>
 	^ self attributeAt: #body ifAbsent: [ nil ]
 ]
 
@@ -68,25 +71,17 @@ FASTTypeScriptDoStatement >> bodyGroup [
 
 { #category : 'accessing' }
 FASTTypeScriptDoStatement >> condition [
-	"Relation named: #condition type: #FASTTEntity opposite: #doConditionOwner"
+	"Relation named: #condition type: #FASTTypeScriptParenthesizedExpression opposite: #doConditionOwner"
 
 	<generated>
-	<FMProperty: #condition type: #FASTTEntity opposite: #doConditionOwner>
-	^ self attributeAt: #condition ifAbsent: [ nil ]
+	^ condition
 ]
 
 { #category : 'accessing' }
 FASTTypeScriptDoStatement >> condition: anObject [
 
 	<generated>
-	(self attributeAt: #condition ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
-	anObject ifNil: [ | otherSide |
-		otherSide :=  self condition.
-		self attributeAt: #condition put: anObject.
-		otherSide doConditionOwner: nil ]
-	ifNotNil: [ 
-		self attributeAt: #condition put: anObject.
-		anObject doConditionOwner: self ]
+	condition := anObject
 ]
 
 { #category : 'navigation' }

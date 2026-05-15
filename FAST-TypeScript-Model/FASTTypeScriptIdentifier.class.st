@@ -7,8 +7,7 @@
 |---|
 | `argumentOwner` | `FASTTExpression` | `arguments` | `FASTTWithArguments` | my owner|
 | `arrowFunctionBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptArrowFunction` | My owner|
-| `arrowFunctionParameterOwner` | `FASTTEntity` | `parameter` | `FASTTypeScriptArrowFunction` | My owner|
-| `arrowFunctionParametersOwner` | `FASTTEntity` | `parameters` | `FASTTypeScriptArrowFunction` | My owner|
+| `arrowFunctionParameterOwner` | `FASTTypeScriptIdentifier` | `parameter` | `FASTTypeScriptArrowFunction` | My owner|
 | `assignedIn` | `FASTTExpression` | `expression` | `FASTTAssignment` | Optional assignment where this expression is used|
 | `assignmentExpressionLeftOwner` | `FASTTExpression` | `left` | `FASTTypeScriptAssignmentExpression` | The expression parent|
 | `assignmentExpressionRightOwner` | `FASTTExpression` | `right` | `FASTTypeScriptAssignmentExpression` | The expression parent|
@@ -20,17 +19,11 @@
 | `conditionalTypeConsequenceOwner` | `FASTTExpression` | `consequence` | `FASTTypeScriptConditionalType` | Consequence owner|
 | `conditionalTypeLeftOwner` | `FASTTExpression` | `left` | `FASTTypeScriptConditionalType` | The left operand (if possible)|
 | `conditionalTypeRightOwner` | `FASTTExpression` | `right` | `FASTTypeScriptConditionalType` | The right operand (if possible)|
-| `doBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptDoStatement` | |
-| `doConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptDoStatement` | |
 | `enumDeclarationNameOwner` | `FASTTypeScriptIdentifier` | `name` | `FASTTypeScriptEnumDeclaration` | My owner|
 | `exportSpecifierAliasOwner` | `FASTTypeScriptTOptionalField` | `alias` | `FASTTypeScriptExportSpecifier` | My owner|
 | `exportSpecifierNameOwner` | `FASTTypeScriptIdentifier` | `name` | `FASTTypeScriptExportSpecifier` | My owner|
-| `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTypeScriptExpressionStatement` | |
 | `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTExpressionStatement` | The expression statement that own me (if it's the case|
-| `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
-| `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |
-| `forIncrementOwner` | `FASTTEntity` | `increment` | `FASTTypeScriptForStatement` | |
-| `forInitializerOwner` | `FASTTEntity` | `initializer` | `FASTTypeScriptForStatement` | |
+| `expressionStatementOwner` | `FASTTExpression` | `expression` | `FASTTypeScriptExpressionStatement` | |
 | `forStatementLeftOwner` | `FASTTExpression` | `left` | `FASTTypeScriptForInStatement` | My owner|
 | `forStatementRightOwner` | `FASTTExpression` | `right` | `FASTTypeScriptForInStatement` | My owner|
 | `functionDeclarationNameOwner` | `FASTTypeScriptIdentifier` | `name` | `FASTTypeScriptFunctionDeclaration` | My owner|
@@ -53,8 +46,6 @@
 | `subscriptExpressionIndexOwner` | `FASTTExpression` | `index` | `FASTTypeScriptSubscriptExpression` | My owner|
 | `subscriptExpressionObjectOwner` | `FASTTExpression` | `object` | `FASTTypeScriptSubscriptExpression` | My owner|
 | `unaryExpressionArgumentOwner` | `FASTTExpression` | `argument` | `FASTTypeScriptUnaryExpression` | The owner of this class|
-| `whileBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptWhileStatement` | |
-| `whileConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptWhileStatement` | |
 
 
 ## Properties
@@ -72,6 +63,7 @@ Class {
 	#traits : 'FASTTExpression + FASTTypeScriptTOptionalField',
 	#classTraits : 'FASTTExpression classTrait + FASTTypeScriptTOptionalField classTrait',
 	#instVars : [
+		'#arrowFunctionParameterOwner => FMOne type: #FASTTypeScriptArrowFunction opposite: #parameter',
 		'#enumDeclarationNameOwner => FMOne type: #FASTTypeScriptEnumDeclaration opposite: #name',
 		'#exportSpecifierNameOwner => FMOne type: #FASTTypeScriptExportSpecifier opposite: #name',
 		'#functionDeclarationNameOwner => FMOne type: #FASTTypeScriptFunctionDeclaration opposite: #name',
@@ -98,6 +90,31 @@ FASTTypeScriptIdentifier class >> annotation [
 FASTTypeScriptIdentifier class >> initialize [ 
 
 	self deprecatedAliases: { #FASTTypescriptIdentifier }
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptIdentifier >> arrowFunctionParameterOwner [
+	"Relation named: #arrowFunctionParameterOwner type: #FASTTypeScriptArrowFunction opposite: #parameter"
+
+	<generated>
+	<FMComment: 'My owner'>
+	<container>
+	<derived>
+	^ arrowFunctionParameterOwner
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptIdentifier >> arrowFunctionParameterOwner: anObject [
+
+	<generated>
+	arrowFunctionParameterOwner := anObject
+]
+
+{ #category : 'navigation' }
+FASTTypeScriptIdentifier >> arrowFunctionParameterOwnerGroup [
+	<generated>
+	<navigation: 'ArrowFunctionParameterOwner'>
+	^ MooseSpecializedGroup with: self arrowFunctionParameterOwner
 ]
 
 { #category : 'accessing' }

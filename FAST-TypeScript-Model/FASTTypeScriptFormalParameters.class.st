@@ -5,6 +5,7 @@
 ### Parents
 | Relation | Origin | Opposite | Type | Comment |
 |---|
+| `arrowFunctionParametersOwner` | `FASTTypeScriptFormalParameters` | `parameters` | `FASTTypeScriptArrowFunction` | My owner|
 | `constructorTypeParametersOwner` | `FASTTypeScriptFormalParameters` | `parameters` | `FASTTypeScriptConstructorType` | The owner of these formal parameters|
 | `functionDeclarationParametersOwner` | `FASTTypeScriptFormalParameters` | `parameters` | `FASTTypeScriptFunctionDeclaration` | My owner|
 | `functionTypeParametersOwner` | `FASTTypeScriptFormalParameters` | `parameters` | `FASTTypeScriptFunctionType` | My owner|
@@ -22,10 +23,11 @@ Class {
 	#name : 'FASTTypeScriptFormalParameters',
 	#superclass : 'FASTTypeScriptEntity',
 	#instVars : [
-		'#functionTypeParametersOwner => FMOne type: #FASTTypeScriptFunctionType opposite: #parameters',
+		'#arrowFunctionParametersOwner => FMOne type: #FASTTypeScriptArrowFunction opposite: #parameters',
 		'#constructorTypeParametersOwner => FMOne type: #FASTTypeScriptConstructorType opposite: #parameters',
-		'#methodDefinitionParametersOwner => FMOne type: #FASTTypeScriptMethodDefinition opposite: #parameters',
-		'#functionDeclarationParametersOwner => FMOne type: #FASTTypeScriptFunctionDeclaration opposite: #parameters'
+		'#functionDeclarationParametersOwner => FMOne type: #FASTTypeScriptFunctionDeclaration opposite: #parameters',
+		'#functionTypeParametersOwner => FMOne type: #FASTTypeScriptFunctionType opposite: #parameters',
+		'#methodDefinitionParametersOwner => FMOne type: #FASTTypeScriptMethodDefinition opposite: #parameters'
 	],
 	#category : 'FAST-TypeScript-Model-Entities',
 	#package : 'FAST-TypeScript-Model',
@@ -53,6 +55,31 @@ FASTTypeScriptFormalParameters class >> initialize [
 FASTTypeScriptFormalParameters >> addParameter: anObject [
 	<generated>
 	^ self parameters add: anObject
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptFormalParameters >> arrowFunctionParametersOwner [
+	"Relation named: #arrowFunctionParametersOwner type: #FASTTypeScriptArrowFunction opposite: #parameters"
+
+	<generated>
+	<FMComment: 'My owner'>
+	<container>
+	<derived>
+	^ arrowFunctionParametersOwner
+]
+
+{ #category : 'accessing' }
+FASTTypeScriptFormalParameters >> arrowFunctionParametersOwner: anObject [
+
+	<generated>
+	arrowFunctionParametersOwner := anObject
+]
+
+{ #category : 'navigation' }
+FASTTypeScriptFormalParameters >> arrowFunctionParametersOwnerGroup [
+	<generated>
+	<navigation: 'ArrowFunctionParametersOwner'>
+	^ MooseSpecializedGroup with: self arrowFunctionParametersOwner
 ]
 
 { #category : 'accessing' }

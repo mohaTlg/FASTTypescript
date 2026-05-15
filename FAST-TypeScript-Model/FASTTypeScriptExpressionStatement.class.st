@@ -6,19 +6,11 @@
 | Relation | Origin | Opposite | Type | Comment |
 |---|
 | `arrowFunctionBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptArrowFunction` | My owner|
-| `arrowFunctionParameterOwner` | `FASTTEntity` | `parameter` | `FASTTypeScriptArrowFunction` | My owner|
-| `arrowFunctionParametersOwner` | `FASTTEntity` | `parameters` | `FASTTypeScriptArrowFunction` | My owner|
-| `doBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptDoStatement` | |
-| `doConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptDoStatement` | |
-| `forBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptForStatement` | |
-| `forConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptForStatement` | |
-| `forIncrementOwner` | `FASTTEntity` | `increment` | `FASTTypeScriptForStatement` | |
-| `forInitializerOwner` | `FASTTEntity` | `initializer` | `FASTTypeScriptForStatement` | |
+| `doBodyOwner` | `FASTTStatement` | `body` | `FASTTypeScriptDoStatement` | |
 | `parentFormalParameters` | `FASTTEntity` | `parameters` | `FASTTypeScriptFormalParameters` | My owner|
 | `parentLoopStatement` | `FASTTStatement` | `body` | `FASTTLoopStatement` | Optional loop of which this statement is the body|
 | `statementContainer` | `FASTTStatement` | `statements` | `FASTTStatementBlock` | Block containing this statement.|
-| `whileBodyOwner` | `FASTTEntity` | `body` | `FASTTypeScriptWhileStatement` | |
-| `whileConditionOwner` | `FASTTEntity` | `condition` | `FASTTypeScriptWhileStatement` | |
+| `whileBodyOwner` | `FASTTStatement` | `body` | `FASTTypeScriptWhileStatement` | |
 
 ### Children
 | Relation | Origin | Opposite | Type | Comment |

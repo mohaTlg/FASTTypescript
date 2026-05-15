@@ -626,10 +626,10 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 			 'My Owner').
 			
 			"--- FOR STATEMENT RELATIONS ---"
-		(forStatement property: #initializer) <>- (tEntity property: #forInitializerOwner).
-		(forStatement property: #condition) <>- (tEntity property: #forConditionOwner).
-    	(forStatement property: #increment) <>- (tEntity property: #forIncrementOwner).
-    	(forStatement property: #body) <>- (tEntity property: #forBodyOwner).
+		(forStatement property: #initializer) <>- (lexicalDeclaration property: #forInitializerOwner).
+		(forStatement property: #condition) <>- (binaryExpression property: #forConditionOwner).
+    	(forStatement property: #increment) <>- (updateExpression property: #forIncrementOwner).
+    	(forStatement property: #body) <>- (statementBlock property: #forBodyOwner).
 
 
 	((newExpression property: #constructor) comment:
@@ -927,18 +927,18 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 			
 	"-----------------------"
 	((arrowFunction property: #parameter) comment: 'The single parameter of the arrow function') 
-		<>- ((tEntity property: #arrowFunctionParameterOwner) comment: 'My owner').
+		<>- ((identifier property: #arrowFunctionParameterOwner) comment: 'My owner').
 		
 	((arrowFunction property: #parameters) comment: 'The parameters of the arrow function') 
-		<>- ((tEntity property: #arrowFunctionParametersOwner) comment: 'My owner').
+		<>- ((formalParameters property: #arrowFunctionParametersOwner) comment: 'My owner').
 		
 	((arrowFunction property: #body) comment: 'The body of the arrow function') 
 		<>- ((tEntity property: #arrowFunctionBodyOwner) comment: 'My owner').
 		
 
 	"DoStatement"	
-		(doStatement property: #condition) <>- (tEntity property: #doConditionOwner).
-		(doStatement property: #body) <>- (tEntity property: #doBodyOwner).
+		(doStatement property: #condition) <>- (parenthesizedExpression property: #doConditionOwner).
+		(doStatement property: #body) <>- (tStatement property: #doBodyOwner).
 			
 	"ExpressionStatement"
 	((expressionStatement property: #expression) comment: 'The expression contained in the statement')
@@ -955,8 +955,8 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 	((requiredParameter property: #type) comment: 'The type of the parameter (optional)') 
 		<>- (tOptionalField property: #requiredParameterTypeOwner  ).
 	
-	(whileStatement property: #condition) <>- (tEntity property: #whileConditionOwner).
-	(whileStatement property: #body) <>- (tEntity property: #whileBodyOwner).
+	(whileStatement property: #condition) <>- (parenthesizedExpression property: #whileConditionOwner).
+	(whileStatement property: #body) <>- (tStatement property: #whileBodyOwner).
 ]
 
 { #category : 'definition' }

@@ -5,8 +5,8 @@
 ### Children
 | Relation | Origin | Opposite | Type | Comment |
 |---|
-| `body` | `FASTTypeScriptWhileStatement` | `whileBodyOwner` | `FASTTEntity` | |
-| `condition` | `FASTTypeScriptWhileStatement` | `whileConditionOwner` | `FASTTEntity` | |
+| `body` | `FASTTypeScriptWhileStatement` | `whileBodyOwner` | `FASTTStatement` | |
+| `condition` | `FASTTypeScriptWhileStatement` | `whileConditionOwner` | `FASTTypeScriptParenthesizedExpression` | |
 
 
 
@@ -14,6 +14,9 @@
 Class {
 	#name : 'FASTTypeScriptWhileStatement',
 	#superclass : 'FASTTypeScriptStatement',
+	#instVars : [
+		'#condition => FMOne type: #FASTTypeScriptParenthesizedExpression opposite: #whileConditionOwner'
+	],
 	#category : 'FAST-TypeScript-Model-Entities',
 	#package : 'FAST-TypeScript-Model',
 	#tag : 'Entities'
@@ -38,10 +41,10 @@ FASTTypeScriptWhileStatement class >> initialize [
 
 { #category : 'accessing' }
 FASTTypeScriptWhileStatement >> body [
-	"Relation named: #body type: #FASTTEntity opposite: #whileBodyOwner"
+	"Relation named: #body type: #FASTTStatement opposite: #whileBodyOwner"
 
 	<generated>
-	<FMProperty: #body type: #FASTTEntity opposite: #whileBodyOwner>
+	<FMProperty: #body type: #FASTTStatement opposite: #whileBodyOwner>
 	^ self attributeAt: #body ifAbsent: [ nil ]
 ]
 
@@ -68,25 +71,17 @@ FASTTypeScriptWhileStatement >> bodyGroup [
 
 { #category : 'accessing' }
 FASTTypeScriptWhileStatement >> condition [
-	"Relation named: #condition type: #FASTTEntity opposite: #whileConditionOwner"
+	"Relation named: #condition type: #FASTTypeScriptParenthesizedExpression opposite: #whileConditionOwner"
 
 	<generated>
-	<FMProperty: #condition type: #FASTTEntity opposite: #whileConditionOwner>
-	^ self attributeAt: #condition ifAbsent: [ nil ]
+	^ condition
 ]
 
 { #category : 'accessing' }
 FASTTypeScriptWhileStatement >> condition: anObject [
 
 	<generated>
-	(self attributeAt: #condition ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
-	anObject ifNil: [ | otherSide |
-		otherSide :=  self condition.
-		self attributeAt: #condition put: anObject.
-		otherSide whileConditionOwner: nil ]
-	ifNotNil: [ 
-		self attributeAt: #condition put: anObject.
-		anObject whileConditionOwner: self ]
+	condition := anObject
 ]
 
 { #category : 'navigation' }
