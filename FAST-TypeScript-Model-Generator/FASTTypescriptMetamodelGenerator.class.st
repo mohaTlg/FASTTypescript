@@ -926,6 +926,10 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 			 'The owner of the modifier').
 			
 	"-----------------------"
+	"Arguments"
+	((arguments property: #argumentsList) comment: 'The list of arguments (expressions or spread elements)')
+	<>-* ((tEntity property: #argumentsOwner) comment: 'The arguments node that owns me').
+	
 	((arrowFunction property: #parameter) comment: 'The single parameter of the arrow function') 
 		<>- ((identifier property: #arrowFunctionParameterOwner) comment: 'My owner').
 		

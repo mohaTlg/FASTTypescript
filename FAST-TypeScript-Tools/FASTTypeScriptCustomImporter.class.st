@@ -44,6 +44,23 @@ FASTTypeScriptCustomImporter >> visitNode: aTSNode [
 			ifFalse: [ aFASTEntity addGenericChild: child ]
 		]
 		].
+	
+	" --- ARGUMENTS --- "
+    aTSNode type = 'arguments' ifTrue: [ 
+        | childrenToCopy |
+        childrenToCopy := aFASTEntity genericChildren asArray.
+        aFASTEntity genericChildren removeAll.
+        
+        childrenToCopy do: [ :child |
+            (child respondsTo: #argumentsOwner:) 
+            ifTrue: [ 
+                child argumentsOwner: aFASTEntity. 
+            ]
+            ifFalse: [ 
+                aFASTEntity addGenericChild: child.
+            ]
+        ]
+    ].
 
     ^ aFASTEntity
 ]

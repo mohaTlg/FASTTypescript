@@ -1,6 +1,25 @@
 Extension { #name : 'FASTTEntity' }
 
 { #category : '*FAST-TypeScript-Model-accessing' }
+FASTTEntity >> argumentsOwner [
+	"Relation named: #argumentsOwner type: #FASTTypeScriptArguments opposite: #argumentsList"
+
+	<generated>
+	<FMComment: 'The arguments node that owns me'>
+	<container>
+	<FMProperty: #argumentsOwner type: #FASTTypeScriptArguments opposite: #argumentsList>
+	<package: #'FAST-TypeScript-Model'>
+	^ self attributeAt: #argumentsOwner ifAbsent: [ nil ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTEntity >> argumentsOwner: anObject [
+
+	<generated>
+	self attributeAt: #argumentsOwner put: (FMMultivalueLink on: self update: #argumentsList from: self argumentsOwner to: anObject).
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
 FASTTEntity >> arrowFunctionBodyOwner [
 	"Relation named: #arrowFunctionBodyOwner type: #FASTTypeScriptArrowFunction opposite: #body"
 

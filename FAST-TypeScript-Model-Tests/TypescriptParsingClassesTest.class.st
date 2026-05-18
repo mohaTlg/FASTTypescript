@@ -24,6 +24,24 @@ TypeScriptParsingClassesTest >> tearDown [
 ]
 
 { #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingArguments [
+	| res string  argsNode|
+
+	string := 'aFonction(1, "test", ...monTableau);'.
+	res := parser parse: string.
+    
+    argsNode := (res allWithType: FASTTypeScriptArguments) first.
+    
+    self assert: argsNode argumentsList isNotEmpty.
+    
+    self assert: argsNode argumentsList size equals: 3.
+    
+    self assert: (argsNode argumentsList last isKindOf: FASTTypeScriptSpreadElement).
+    
+    self assert: argsNode genericChildren isEmpty.
+]
+
+{ #category : 'tests' }
 TypeScriptParsingClassesTest >> testParsingArray [
 
 	| res string  |
