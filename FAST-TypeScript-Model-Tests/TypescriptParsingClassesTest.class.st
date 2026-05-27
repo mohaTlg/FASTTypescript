@@ -27,10 +27,11 @@ TypeScriptParsingClassesTest >> tearDown [
 TypeScriptParsingClassesTest >> testParsingArguments [
 	| res string  argsNode|
 
-	string := 'aFonction(1, "test", ...monTableau);'.
+	string := 'aFonction(1, "test", ...myArray);'.
 	res := parser parse: string.
     
     argsNode := (res allWithType: FASTTypeScriptArguments) first.
+	
     
     self assert: argsNode argumentsList isNotEmpty.
     
@@ -310,6 +311,7 @@ TypeScriptParsingClassesTest >> testParsingExpressionStatement [
 	string := 'x = 5'.
 		
 	res := parser parse: string.
+	
 
 	self assert:
 		(res allWithType: FASTTypeScriptExpressionStatement ) isNotEmpty.
@@ -926,6 +928,26 @@ TypeScriptParsingClassesTest >> testParsingTemplateType [
 	
 	"Checking properties of FASTTypescriptTemplate_type"	
 	node := (res allWithType: FASTTypescriptTemplate_type) first.
+]
+
+{ #category : 'tests' }
+TypeScriptParsingClassesTest >> testParsingTernaryExpression [
+    | ast ternaryNode |
+    
+    ast := parser parse: 'let x = a > b ? 1 : false;'.
+    
+    ternaryNode := (ast allWithType: FASTTypeScriptTernaryExpression) first.
+    
+    self assert: ternaryNode condition isNotNil.
+    self assert: ternaryNode consequence isNotNil.
+    self assert: ternaryNode alternative isNotNil.
+    
+    self assert: (ternaryNode condition isKindOf: FASTTypeScriptBinaryExpression).
+
+	self assert: ternaryNode consequence sourceCode equals: '1' .
+	self assert: ternaryNode alternative sourceCode equals: 'false' .
+    
+    self assert: ternaryNode genericChildren isEmpty.
 ]
 
 { #category : 'tests' }

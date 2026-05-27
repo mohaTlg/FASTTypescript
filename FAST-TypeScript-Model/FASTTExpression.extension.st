@@ -487,6 +487,84 @@ FASTTExpression >> subscriptExpressionObjectOwner: anObject [
 ]
 
 { #category : '*FAST-TypeScript-Model-accessing' }
+FASTTExpression >> ternaryExpressionAlternativeOwner [
+	"Relation named: #ternaryExpressionAlternativeOwner type: #FASTTypeScriptTernaryExpression opposite: #alternative"
+
+	<generated>
+	<container>
+	<derived>
+	<FMProperty: #ternaryExpressionAlternativeOwner type: #FASTTypeScriptTernaryExpression opposite: #alternative>
+	<package: #'FAST-TypeScript-Model'>
+	^ self attributeAt: #ternaryExpressionAlternativeOwner ifAbsent: [ nil ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTExpression >> ternaryExpressionAlternativeOwner: anObject [
+
+	<generated>
+	(self attributeAt: #ternaryExpressionAlternativeOwner ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
+	anObject ifNil: [ | otherSide |
+		otherSide :=  self ternaryExpressionAlternativeOwner.
+		self attributeAt: #ternaryExpressionAlternativeOwner put: anObject.
+		otherSide alternative: nil ]
+	ifNotNil: [ 
+		self attributeAt: #ternaryExpressionAlternativeOwner put: anObject.
+		anObject alternative: self ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTExpression >> ternaryExpressionConsequenceOwner [
+	"Relation named: #ternaryExpressionConsequenceOwner type: #FASTTypeScriptTernaryExpression opposite: #consequence"
+
+	<generated>
+	<container>
+	<derived>
+	<FMProperty: #ternaryExpressionConsequenceOwner type: #FASTTypeScriptTernaryExpression opposite: #consequence>
+	<package: #'FAST-TypeScript-Model'>
+	^ self attributeAt: #ternaryExpressionConsequenceOwner ifAbsent: [ nil ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTExpression >> ternaryExpressionConsequenceOwner: anObject [
+
+	<generated>
+	(self attributeAt: #ternaryExpressionConsequenceOwner ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
+	anObject ifNil: [ | otherSide |
+		otherSide :=  self ternaryExpressionConsequenceOwner.
+		self attributeAt: #ternaryExpressionConsequenceOwner put: anObject.
+		otherSide consequence: nil ]
+	ifNotNil: [ 
+		self attributeAt: #ternaryExpressionConsequenceOwner put: anObject.
+		anObject consequence: self ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTExpression >> ternaryExpressionconditionOwner [
+	"Relation named: #ternaryExpressionconditionOwner type: #FASTTypeScriptTernaryExpression opposite: #condition"
+
+	<generated>
+	<container>
+	<derived>
+	<FMProperty: #ternaryExpressionconditionOwner type: #FASTTypeScriptTernaryExpression opposite: #condition>
+	<package: #'FAST-TypeScript-Model'>
+	^ self attributeAt: #ternaryExpressionconditionOwner ifAbsent: [ nil ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
+FASTTExpression >> ternaryExpressionconditionOwner: anObject [
+
+	<generated>
+	(self attributeAt: #ternaryExpressionconditionOwner ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].
+	anObject ifNil: [ | otherSide |
+		otherSide :=  self ternaryExpressionconditionOwner.
+		self attributeAt: #ternaryExpressionconditionOwner put: anObject.
+		otherSide condition: nil ]
+	ifNotNil: [ 
+		self attributeAt: #ternaryExpressionconditionOwner put: anObject.
+		anObject condition: self ]
+]
+
+{ #category : '*FAST-TypeScript-Model-accessing' }
 FASTTExpression >> unaryExpressionArgumentOwner [
 	"Relation named: #unaryExpressionArgumentOwner type: #FASTTypeScriptUnaryExpression opposite: #argument"
 

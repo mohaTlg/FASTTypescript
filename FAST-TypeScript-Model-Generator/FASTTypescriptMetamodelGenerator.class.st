@@ -958,6 +958,11 @@ FASTTypeScriptMetamodelGenerator >> defineRelations [
 		<>- (identifier property: #requiredParameterPatternOwner ).
 	((requiredParameter property: #type) comment: 'The type of the parameter (optional)') 
 		<>- (tOptionalField property: #requiredParameterTypeOwner  ).
+		
+	"TernaryExpression"	
+	(ternaryExpression property: #condition) <>- (tExpression property: #ternaryExpressionconditionOwner ).
+	(ternaryExpression property: #consequence ) <>- (tExpression property: #ternaryExpressionConsequenceOwner ).
+	(ternaryExpression property: #alternative) <>- (tExpression property: #ternaryExpressionAlternativeOwner ).
 	
 	(whileStatement property: #condition) <>- (parenthesizedExpression property: #whileConditionOwner).
 	(whileStatement property: #body) <>- (tStatement property: #whileBodyOwner).

@@ -31,7 +31,6 @@ FASTTypeScriptCustomImporter >> visitNode: aTSNode [
         ].
     ].
 
-
 	aTSNode type = 'expression_statement' ifTrue: [ 
 		| childrenToCopy |
 		 childrenToCopy := aFASTEntity genericChildren asArray.
