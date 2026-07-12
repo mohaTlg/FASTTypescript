@@ -2,203 +2,193 @@ Class {
 	#name : 'FASTTypeScriptMetamodelGenerator',
 	#superclass : 'FamixMetamodelGenerator',
 	#instVars : [
-		'propertyIdentifier',
-		'_true',
-		'_false',
-		'_super',
 		'entity',
-		'compilationUnit',
-		'tEntity',
-		'tWithComments',
-		'tStatement',
-		'tDeclaration',
-		'tWithDeclarations',
-		'tModifier',
-		'tWithModifiers',
-		'tNamedEntity',
-		'tLiteral',
 		'_ERROR',
-		'tExpression',
-		'tWithParameters',
-		'tReturnType',
-		'tOptionalField',
-		'program',
-		'expression',
-		'constraint',
-		'number',
-		'import',
-		'regex',
-		'class',
-		'boolean',
-		'module',
-		'pair',
-		'null',
-		'comment',
-		'asserts',
-		'decorator',
-		'identifier',
-		'array',
-		'undefined',
-		'object',
-		'arguments',
-		'this',
-		'string',
-		'spreadElement',
-		'breakStatement',
-		'arrowFunction',
+		'tEntity',
 		'abstractClassDeclaration',
-		'callSignature',
-		'labeledStatement',
-		'formalParameters',
-		'statementIdentifier',
-		'existentialType',
-		'metaProperty',
-		'typeParameters',
-		'asExpression',
-		'doStatement',
-		'typeAssertion',
-		'lookupType',
-		'lexicalDeclaration',
-		'templateString',
-		'indexSignature',
-		'importStatement',
-		'debuggerStatement',
-		'restPattern',
-		'satisfiesExpression',
-		'switchDefault',
-		'enumDeclaration',
-		'switchBody',
-		'subscriptExpression',
-		'unionType',
-		'interfaceBody',
-		'typeIdentifier',
-		'functionDeclaration',
-		'arrayType',
-		'newExpression',
-		'literalType',
-		'typePredicateAnnotation',
-		'enumBody',
-		'restType',
-		'exportStatement',
-		'catchClause',
-		'methodSignature',
-		'interfaceDeclaration',
-		'jsxText',
-		'exportClause',
-		'switchStatement',
-		'forStatement',
-		'accessibilityModifier',
-		'functionExpression',
-		'generatorFunctionDeclaration',
-		'functionType',
-		'escapeSequence',
-		'typeQuery',
-		'shorthandPropertyIdentifierPattern',
-		'binaryExpression',
-		'parenthesizedExpression',
-		'classDeclaration',
-		'returnStatement',
-		'assignmentExpression',
-		'unaryExpression',
-		'variableDeclarator',
-		'classHeritage',
-		'regexPattern',
-		'omittingTypeAnnotation',
-		'elseClause',
-		'thisType',
-		'withStatement',
-		'privatePropertyIdentifier',
-		'throwStatement',
-		'hashBangLine',
-		'nestedTypeIdentifier',
-		'emptyStatement',
-		'readonlyType',
-		'classBody',
-		'importClause',
-		'optionalChain',
-		'templateLiteralType',
-		'assignmentPattern',
-		'nestedIdentifier',
-		'publicFieldDefinition',
-		'importAlias',
-		'tryStatement',
-		'typeAliasDeclaration',
-		'optionalParameter',
-		'constructorType',
-		'conditionalType',
-		'parenthesizedType',
-		'constructSignature',
-		'flowMaybeType',
-		'arrayPattern',
-		'finallyClause',
-		'extendsClause',
-		'genericType',
-		'namespaceImport',
-		'objectAssignmentPattern',
-		'computedPropertyName',
-		'typeParameter',
-		'templateSubstitution',
-		'instantiationExpression',
-		'memberExpression',
-		'implementsClause',
-		'callExpression',
-		'ambientDeclaration',
-		'templateType',
-		'inferType',
-		'ifStatement',
-		'namedImports',
-		'objectPattern',
-		'awaitExpression',
-		'pairPattern',
-		'importRequireClause',
-		'typeAnnotation',
-		'nonNullExpression',
-		'objectType',
-		'shorthandPropertyIdentifier',
-		'indexTypeQuery',
-		'forInStatement',
-		'generatorFunction',
-		'typePredicate',
-		'typeArguments',
-		'regexFlags',
-		'sequenceExpression',
-		'tupleType',
-		'optingTypeAnnotation',
-		'internalModule',
-		'predefinedType',
-		'importSpecifier',
 		'abstractMethodSignature',
-		'assertsAnnotation',
-		'yieldExpression',
-		'overrideModifier',
-		'mappedTypeClause',
-		'statementBlock',
-		'functionSignature',
-		'continueStatement',
-		'optionalType',
-		'expressionStatement',
-		'classStaticBlock',
-		'extendsTypeClause',
+		'accessibilityModifier',
 		'addingTypeAnnotation',
+		'ambientDeclaration',
+		'arguments',
+		'array',
+		'arrayPattern',
+		'arrayType',
+		'arrowFunction',
+		'asExpression',
+		'asserts',
+		'assertsAnnotation',
+		'assignmentExpression',
+		'assignmentPattern',
 		'augmentedAssignmentExpression',
-		'variableDeclaration',
-		'exportSpecifier',
-		'intersectionType',
-		'updateExpression',
-		'htmlComment',
-		'enumAssignment',
-		'namespaceExport',
-		'requiredParameter',
-		'importAttribute',
-		'stringFragment',
+		'awaitExpression',
+		'binaryExpression',
+		'breakStatement',
+		'callExpression',
+		'callSignature',
+		'catchClause',
+		'class',
+		'classBody',
+		'classDeclaration',
+		'classHeritage',
+		'classStaticBlock',
+		'comment',
+		'computedPropertyName',
+		'conditionalType',
+		'constraint',
+		'constructSignature',
+		'constructorType',
+		'continueStatement',
+		'debuggerStatement',
+		'decorator',
 		'defaultType',
-		'ternaryExpression',
-		'whileStatement',
+		'doStatement',
+		'elseClause',
+		'emptyStatement',
+		'enumAssignment',
+		'enumBody',
+		'enumDeclaration',
+		'escapeSequence',
+		'existentialType',
+		'exportClause',
+		'exportSpecifier',
+		'exportStatement',
+		'expressionStatement',
+		'extendsClause',
+		'extendsTypeClause',
+		'falseClass',
+		'finallyClause',
+		'flowMaybeType',
+		'forInStatement',
+		'forStatement',
+		'formalParameters',
+		'functionDeclaration',
+		'functionExpression',
+		'functionSignature',
+		'functionType',
+		'generatorFunction',
+		'generatorFunctionDeclaration',
+		'genericType',
+		'hashBangLine',
+		'htmlComment',
+		'identifier',
+		'ifStatement',
+		'implementsClause',
+		'import',
+		'importAlias',
+		'importAttribute',
+		'importClause',
+		'importRequireClause',
+		'importSpecifier',
+		'importStatement',
+		'indexSignature',
+		'indexTypeQuery',
+		'inferType',
+		'instantiationExpression',
+		'interfaceBody',
+		'interfaceDeclaration',
+		'internalModule',
+		'intersectionType',
+		'jsxText',
+		'labeledStatement',
+		'lexicalDeclaration',
+		'literalType',
+		'lookupType',
+		'mappedTypeClause',
+		'memberExpression',
+		'metaProperty',
 		'methodDefinition',
+		'methodSignature',
+		'module',
+		'namedImports',
+		'namespaceExport',
+		'namespaceImport',
+		'nestedIdentifier',
+		'nestedTypeIdentifier',
+		'newExpression',
+		'nonNullExpression',
+		'null',
+		'number',
+		'object',
+		'objectAssignmentPattern',
+		'objectPattern',
+		'objectType',
+		'omittingTypeAnnotation',
+		'optingTypeAnnotation',
+		'optionalChain',
+		'optionalParameter',
+		'optionalType',
+		'overrideModifier',
+		'pair',
+		'pairPattern',
+		'parenthesizedExpression',
+		'parenthesizedType',
+		'predefinedType',
+		'privatePropertyIdentifier',
+		'program',
+		'propertyIdentifier',
 		'propertySignature',
+		'publicFieldDefinition',
+		'readonlyType',
+		'regex',
+		'regexFlags',
+		'regexPattern',
+		'requiredParameter',
+		'restPattern',
+		'restType',
+		'returnStatement',
+		'satisfiesExpression',
+		'sequenceExpression',
+		'shorthandPropertyIdentifier',
+		'shorthandPropertyIdentifierPattern',
+		'spreadElement',
+		'statementBlock',
+		'statementIdentifier',
+		'string',
+		'stringFragment',
+		'subscriptExpression',
+		'superClass',
+		'switchBody',
 		'switchCase',
-		'literal',
-		'statement'
+		'switchDefault',
+		'switchStatement',
+		'templateLiteralType',
+		'templateString',
+		'templateSubstitution',
+		'templateType',
+		'ternaryExpression',
+		'this',
+		'thisType',
+		'throwStatement',
+		'trueClass',
+		'tryStatement',
+		'tupleType',
+		'typeAliasDeclaration',
+		'typeAnnotation',
+		'typeArguments',
+		'typeAssertion',
+		'typeIdentifier',
+		'typeParameter',
+		'typeParameters',
+		'typePredicate',
+		'typePredicateAnnotation',
+		'typeQuery',
+		'unaryExpression',
+		'undefined',
+		'unionType',
+		'updateExpression',
+		'variableDeclaration',
+		'variableDeclarator',
+		'whileStatement',
+		'withStatement',
+		'yieldExpression',
+		'tDeclaration',
+		'tExpression',
+		'tPattern',
+		'tPrimaryExpression',
+		'tPrimaryType',
+		'tStatement',
+		'tType'
 	],
 	#category : 'FAST-TypeScript-Model-Generator',
 	#package : 'FAST-TypeScript-Model-Generator'
@@ -224,780 +214,1285 @@ FASTTypeScriptMetamodelGenerator class >> submetamodels [
 
 { #category : 'definition' }
 FASTTypeScriptMetamodelGenerator >> defineClasses [
-
-	entity := self newClassNamed: #Entity.
-
-	program := builder ensureClassNamed: #Program.
-	
-	identifier := builder ensureClassNamed: #Identifier.
-	hashBangLine := builder ensureClassNamed: #HashBangLine.
-	stringFragment := builder ensureClassNamed: #StringFragment. 
-	escapeSequence := builder ensureClassNamed: #EscapeSequence.
-	comment := builder ensureClassNamed: #Comment.
-	regexPattern := builder ensureClassNamed: #RegexPattern.
-	regexFlags := builder ensureClassNamed: #RegexFlags.
-	number := builder ensureClassNamed: #Number.
-	privatePropertyIdentifier := builder ensureClassNamed: #PrivatePropertyIdentifier.
-	this := builder ensureClassNamed: #This.
-	_super := builder ensureClassNamed: #Super.
-	
-	literal := builder ensureClassNamed: #Literal.
-	boolean := builder ensureClassNamed: #Boolean.
-	_true := builder ensureClassNamed: #True.
-	_false := builder ensureClassNamed: #False.
-	
-	null := builder ensureClassNamed: #Null.
-	undefined := builder ensureClassNamed: #Undefined.
-	htmlComment := builder ensureClassNamed: #HtmlComment.
-	jsxText := builder ensureClassNamed: #JsxText.
-	
-	exportStatement := builder ensureClassNamed: #ExportStatement.
-	namespaceExport := builder ensureClassNamed: #NamespaceExport.
-	exportClause := builder ensureClassNamed: #ExportClause.
-	exportSpecifier := builder ensureClassNamed: #ExportSpecifier.
-	import := builder ensureClassNamed: #Import.
-	importStatement := builder ensureClassNamed: #ImportStatement.
-	importClause := builder ensureClassNamed: #ImportClause.
-	namespaceImport := builder ensureClassNamed: #NamespaceImport.
-	namedImports := builder ensureClassNamed: #NamedImports.
-	importSpecifier := builder ensureClassNamed: #ImportSpecifier.
-	importAttribute := builder ensureClassNamed: #ImportAttribute.
-	expressionStatement := builder ensureClassNamed: #ExpressionStatement.
-	variableDeclaration := builder ensureClassNamed: #VariableDeclaration.
-	lexicalDeclaration := builder ensureClassNamed: #LexicalDeclaration.
-	variableDeclarator := builder ensureClassNamed: #VariableDeclarator.
-	statementBlock := builder ensureClassNamed: #StatementBlock.
-	elseClause := builder ensureClassNamed: #ElseClause.
-	ifStatement := builder ensureClassNamed: #IfStatement.
-	switchStatement := builder ensureClassNamed: #SwitchStatement.
-	forStatement := builder ensureClassNamed: #ForStatement.
-	forInStatement := builder ensureClassNamed: #ForInStatement.
-	whileStatement := builder ensureClassNamed: #WhileStatement.
-	doStatement := builder ensureClassNamed: #DoStatement.
-	tryStatement := builder ensureClassNamed: #TryStatement.
-	withStatement := builder ensureClassNamed: #WithStatement.
-	breakStatement := builder ensureClassNamed: #BreakStatement.
-	continueStatement := builder ensureClassNamed: #ContinueStatement.
-	debuggerStatement := builder ensureClassNamed: #DebuggerStatement.
-	returnStatement := builder ensureClassNamed: #ReturnStatement.
-	throwStatement := builder ensureClassNamed: #ThrowStatement.
-	emptyStatement := builder ensureClassNamed: #EmptyStatement.
-	labeledStatement := builder ensureClassNamed: #LabeledStatement.
-	switchBody := builder ensureClassNamed: #SwitchBody.
-	switchCase := builder ensureClassNamed: #SwitchCase.
-	switchDefault := builder ensureClassNamed: #SwitchDefault.
-	catchClause := builder ensureClassNamed: #CatchClause.
-	finallyClause := builder ensureClassNamed: #FinallyClause.
-	parenthesizedExpression := builder ensureClassNamed: #ParenthesizedExpression.
-	yieldExpression := builder ensureClassNamed: #YieldExpression.
-	object := builder ensureClassNamed: #Object.
-	objectPattern := builder ensureClassNamed: #ObjectPattern.
-	assignmentPattern := builder ensureClassNamed: #AssignmentPattern.
-	objectAssignmentPattern := builder ensureClassNamed: #ObjectAssignmentPattern.
-	array := builder ensureClassNamed: #Array.
-	arrayPattern := builder ensureClassNamed: #ArrayPattern.
-	nestedIdentifier := builder ensureClassNamed: #NestedIdentifier.
-	class := builder ensureClassNamed: #Class.
-
-	classDeclaration := builder ensureClassNamed: #ClassDeclaration.
-	classDeclaration withTesting.
-	
-	classHeritage := builder ensureClassNamed: #ClassHeritage.
-	functionExpression := builder ensureClassNamed: #FunctionExpression.
-	functionDeclaration := builder ensureClassNamed: #FunctionDeclaration.
-	generatorFunction := builder ensureClassNamed: #GeneratorFunction.
-	generatorFunctionDeclaration := builder ensureClassNamed: #GeneratorFunctionDeclaration.
-	arrowFunction := builder ensureClassNamed: #ArrowFunction.
-	optionalChain := builder ensureClassNamed: #OptionalChain.
-	callExpression := builder ensureClassNamed: #CallExpression.
-	newExpression := builder ensureClassNamed: #NewExpression.
-	awaitExpression := builder ensureClassNamed: #AwaitExpression.
-	memberExpression := builder ensureClassNamed: #MemberExpression.
-	subscriptExpression := builder ensureClassNamed: #SubscriptExpression.
-	assignmentExpression := builder ensureClassNamed: #AssignmentExpression.
-	augmentedAssignmentExpression := builder ensureClassNamed: #AugmentedAssignmentExpression.
-	spreadElement := builder ensureClassNamed: #SpreadElement.
-	ternaryExpression := builder ensureClassNamed: #TernaryExpression.
-	binaryExpression := builder ensureClassNamed: #BinaryExpression.
-	unaryExpression := builder ensureClassNamed: #UnaryExpression.
-	updateExpression := builder ensureClassNamed: #UpdateExpression.
-	sequenceExpression := builder ensureClassNamed: #SequenceExpression.
-	string := builder ensureClassNamed: #String.
-	templateString := builder ensureClassNamed: #TemplateString.
-	templateSubstitution := builder ensureClassNamed: #TemplateSubstitution.
-	regex := builder ensureClassNamed: #Regex.
-	metaProperty := builder ensureClassNamed: #MetaProperty.
-	arguments := builder ensureClassNamed: #Arguments.
-	decorator := builder ensureClassNamed: #Decorator. 
-	classBody := builder ensureClassNamed: #ClassBody.
-	formalParameters := builder ensureClassNamed: #FormalParameters.
-	classStaticBlock := builder ensureClassNamed: #ClassStaticBlock.
-	restPattern := builder ensureClassNamed: #RestPattern.
-	methodDefinition := builder ensureClassNamed: #MethodDefinition.
-	pair := builder ensureClassNamed: #Pair.
-	pairPattern := builder ensureClassNamed: #PairPattern.
-	computedPropertyName := builder ensureClassNamed: #ComputedPropertyName.
-	publicFieldDefinition := builder ensureClassNamed: #PublicFieldDefinition.
-	nonNullExpression := builder ensureClassNamed: #NonNullExpression.
-	methodSignature := builder ensureClassNamed: #MethodSignature.
-	abstractMethodSignature := builder ensureClassNamed: #AbstractMethodSignature.
-	functionSignature := builder ensureClassNamed: #FunctionSignature. 
-	typeAssertion := builder ensureClassNamed: #TypeAssertion.
-	asExpression := builder ensureClassNamed: #AsExpression.
-	satisfiesExpression := builder ensureClassNamed: #SatisfiesExpression.
-	instantiationExpression := builder ensureClassNamed: #InstantiationExpression.
-	importRequireClause := builder ensureClassNamed: #ImportRequireClause.
-	extendsClause := builder ensureClassNamed: #ExtendsClause.
-	implementsClause := builder ensureClassNamed: #ImplementsClause.
-	ambientDeclaration := builder ensureClassNamed: #AmbientDeclaration.
-	abstractClassDeclaration := builder ensureClassNamed: #AbstractClassDeclaration.
-	module := builder ensureClassNamed: #Module.
-	internalModule := builder ensureClassNamed: #InternalModule.
-	importAlias := builder ensureClassNamed: #ImportAlias.
-	nestedTypeIdentifier := builder ensureClassNamed: #NestedTypeIdentifier.
-	interfaceDeclaration := builder ensureClassNamed: #InterfaceDeclaration.
-	extendsTypeClause := builder ensureClassNamed: #ExtendsTypeClause.
-	
-	enumDeclaration := builder ensureClassNamed: #EnumDeclaration.
-	enumDeclaration withTesting.
-	
-	enumBody := builder ensureClassNamed: #EnumBody.
-	enumAssignment := builder ensureClassNamed: #EnumAssignment.
-	typeAliasDeclaration := builder ensureClassNamed: #TypeAliasDeclaration.
-	accessibilityModifier := builder ensureClassNamed: #AccessibilityModifier.
-	overrideModifier := builder ensureClassNamed: #OverrideModifier.
-	requiredParameter := builder ensureClassNamed: #RequiredParameter.
-	optionalParameter := builder ensureClassNamed: #OptionalParameter.
-	omittingTypeAnnotation := builder ensureClassNamed: #OmittingTypeAnnotation.
-	addingTypeAnnotation := builder ensureClassNamed: #AddingTypeAnnotation.
-	optingTypeAnnotation := builder ensureClassNamed: #OptingTypeAnnotation.
-	typeAnnotation := builder ensureClassNamed: #TypeAnnotation.
-	callExpression := builder ensureClassNamed: #CallExpression.
-	asserts := builder ensureClassNamed: #Asserts.
-	assertsAnnotation := builder ensureClassNamed: #AssertsAnnotation. 
-	optionalType := builder ensureClassNamed: #OptionalType.
-	restType := builder ensureClassNamed: #RestType.
-	constructorType := builder ensureClassNamed: #ConstructorType.
-	templateType := builder ensureClassNamed: #TemplateType.
-	templateLiteralType := builder ensureClassNamed: #TemplateLiteralType.
-	inferType := builder ensureClassNamed: #InferType.
-	conditionalType := builder ensureClassNamed: #ConditionalType.
-	genericType := builder ensureClassNamed: #GenericType.
-	typePredicate := builder ensureClassNamed: #TypePredicate.
-	typePredicateAnnotation := builder ensureClassNamed: #TypePredicateAnnotation. 
-	typeQuery := builder ensureClassNamed: #TypeQuery.
-	indexTypeQuery := builder ensureClassNamed: #IndexTypeQuery.
-	lookupType := builder ensureClassNamed: #LookupType.
-	mappedTypeClause := builder ensureClassNamed: #MappedTypeClause.
-	literalType := builder ensureClassNamed: #LiteralType. 
-	existentialType := builder ensureClassNamed: #ExistentialType.
-	flowMaybeType := builder ensureClassNamed: #FlowMaybeType.
-	parenthesizedType := builder ensureClassNamed: #ParenthesizedType.
-	predefinedType := builder ensureClassNamed: #PredefinedType.
-	typeArguments := builder ensureClassNamed: #TypeArguments.
-	objectType := builder ensureClassNamed: #ObjectType.
-	callSignature := builder ensureClassNamed: #CallSignature.
-	propertySignature := builder ensureClassNamed: #PropertySignature.
-	typeParameters := builder ensureClassNamed: #TypeParameters.
-	typeParameter := builder ensureClassNamed: #TypeParameter.
-	defaultType := builder ensureClassNamed: #DefaultType.
-	constraint := builder ensureClassNamed: #Constraint.
-	constructSignature := builder ensureClassNamed: #ConstructSignature.
-	indexSignature := builder ensureClassNamed: #IndexSignature.
-	arrayType := builder ensureClassNamed: #ArrayType.
-	tupleType := builder ensureClassNamed: #TupleType .
-	readonlyType := builder ensureClassNamed: #ReadonlyType.
-	unionType := builder ensureClassNamed: #UnionType.
-	intersectionType := builder ensureClassNamed: #IntersectionType.
-	functionType := builder ensureClassNamed: #FunctionType.
-	interfaceBody := builder ensureClassNamed: #InterfaceBody.
-	propertyIdentifier := builder ensureClassNamed: #PropertyIdentifier.
-	shorthandPropertyIdentifier := builder ensureClassNamed: #ShorthandPropertyIdentifier.
-	shorthandPropertyIdentifierPattern := builder ensureClassNamed: #ShorthandPropertyIdentifierPattern.
-	statementIdentifier := builder ensureClassNamed: #StatementIdentifier.
-	thisType := builder ensureClassNamed: #ThisType.
-	typeIdentifier := builder ensureClassNamed: #TypeIdentifier.
-	_ERROR := builder ensureClassNamed: #ERROR.
-	expression := builder ensureClassNamed: #Expression. 
-	compilationUnit := builder ensureClassNamed: #CompilationUnit.
-	compilationUnit withTesting.
-	statement := builder ensureClassNamed: #Statement. 
-	
-	
-
+	super defineClasses.
+	entity := builder newClassNamed: #Entity.
+	_ERROR := builder newClassNamed: #ERROR.
+	abstractClassDeclaration := builder newClassNamed: #AbstractClassDeclaration.
+	abstractMethodSignature := builder newClassNamed: #AbstractMethodSignature.
+	accessibilityModifier := builder newClassNamed: #AccessibilityModifier.
+	addingTypeAnnotation := builder newClassNamed: #AddingTypeAnnotation.
+	ambientDeclaration := builder newClassNamed: #AmbientDeclaration.
+	arguments := builder newClassNamed: #Arguments.
+	array := builder newClassNamed: #Array.
+	arrayPattern := builder newClassNamed: #ArrayPattern.
+	arrayType := builder newClassNamed: #ArrayType.
+	arrowFunction := builder newClassNamed: #ArrowFunction.
+	asExpression := builder newClassNamed: #AsExpression.
+	asserts := builder newClassNamed: #Asserts.
+	assertsAnnotation := builder newClassNamed: #AssertsAnnotation.
+	assignmentExpression := builder newClassNamed: #AssignmentExpression.
+	assignmentPattern := builder newClassNamed: #AssignmentPattern.
+	augmentedAssignmentExpression := builder newClassNamed: #AugmentedAssignmentExpression.
+	awaitExpression := builder newClassNamed: #AwaitExpression.
+	binaryExpression := builder newClassNamed: #BinaryExpression.
+	breakStatement := builder newClassNamed: #BreakStatement.
+	callExpression := builder newClassNamed: #CallExpression.
+	callSignature := builder newClassNamed: #CallSignature.
+	catchClause := builder newClassNamed: #CatchClause.
+	class := builder newClassNamed: #Class.
+	classBody := builder newClassNamed: #ClassBody.
+	classDeclaration := builder newClassNamed: #ClassDeclaration.
+	classHeritage := builder newClassNamed: #ClassHeritage.
+	classStaticBlock := builder newClassNamed: #ClassStaticBlock.
+	comment := builder newClassNamed: #Comment.
+	computedPropertyName := builder newClassNamed: #ComputedPropertyName.
+	conditionalType := builder newClassNamed: #ConditionalType.
+	constraint := builder newClassNamed: #Constraint.
+	constructSignature := builder newClassNamed: #ConstructSignature.
+	constructorType := builder newClassNamed: #ConstructorType.
+	continueStatement := builder newClassNamed: #ContinueStatement.
+	debuggerStatement := builder newClassNamed: #DebuggerStatement.
+	decorator := builder newClassNamed: #Decorator.
+	defaultType := builder newClassNamed: #DefaultType.
+	doStatement := builder newClassNamed: #DoStatement.
+	elseClause := builder newClassNamed: #ElseClause.
+	emptyStatement := builder newClassNamed: #EmptyStatement.
+	enumAssignment := builder newClassNamed: #EnumAssignment.
+	enumBody := builder newClassNamed: #EnumBody.
+	enumDeclaration := builder newClassNamed: #EnumDeclaration.
+	escapeSequence := builder newClassNamed: #EscapeSequence.
+	existentialType := builder newClassNamed: #ExistentialType.
+	exportClause := builder newClassNamed: #ExportClause.
+	exportSpecifier := builder newClassNamed: #ExportSpecifier.
+	exportStatement := builder newClassNamed: #ExportStatement.
+	expressionStatement := builder newClassNamed: #ExpressionStatement.
+	extendsClause := builder newClassNamed: #ExtendsClause.
+	extendsTypeClause := builder newClassNamed: #ExtendsTypeClause.
+	falseClass := builder newClassNamed: #FalseClass.
+	finallyClause := builder newClassNamed: #FinallyClause.
+	flowMaybeType := builder newClassNamed: #FlowMaybeType.
+	forInStatement := builder newClassNamed: #ForInStatement.
+	forStatement := builder newClassNamed: #ForStatement.
+	formalParameters := builder newClassNamed: #FormalParameters.
+	functionDeclaration := builder newClassNamed: #FunctionDeclaration.
+	functionExpression := builder newClassNamed: #FunctionExpression.
+	functionSignature := builder newClassNamed: #FunctionSignature.
+	functionType := builder newClassNamed: #FunctionType.
+	generatorFunction := builder newClassNamed: #GeneratorFunction.
+	generatorFunctionDeclaration := builder newClassNamed: #GeneratorFunctionDeclaration.
+	genericType := builder newClassNamed: #GenericType.
+	hashBangLine := builder newClassNamed: #HashBangLine.
+	htmlComment := builder newClassNamed: #HtmlComment.
+	identifier := builder newClassNamed: #Identifier.
+	ifStatement := builder newClassNamed: #IfStatement.
+	implementsClause := builder newClassNamed: #ImplementsClause.
+	import := builder newClassNamed: #Import.
+	importAlias := builder newClassNamed: #ImportAlias.
+	importAttribute := builder newClassNamed: #ImportAttribute.
+	importClause := builder newClassNamed: #ImportClause.
+	importRequireClause := builder newClassNamed: #ImportRequireClause.
+	importSpecifier := builder newClassNamed: #ImportSpecifier.
+	importStatement := builder newClassNamed: #ImportStatement.
+	indexSignature := builder newClassNamed: #IndexSignature.
+	indexTypeQuery := builder newClassNamed: #IndexTypeQuery.
+	inferType := builder newClassNamed: #InferType.
+	instantiationExpression := builder newClassNamed: #InstantiationExpression.
+	interfaceBody := builder newClassNamed: #InterfaceBody.
+	interfaceDeclaration := builder newClassNamed: #InterfaceDeclaration.
+	internalModule := builder newClassNamed: #InternalModule.
+	intersectionType := builder newClassNamed: #IntersectionType.
+	jsxText := builder newClassNamed: #JsxText.
+	labeledStatement := builder newClassNamed: #LabeledStatement.
+	lexicalDeclaration := builder newClassNamed: #LexicalDeclaration.
+	literalType := builder newClassNamed: #LiteralType.
+	lookupType := builder newClassNamed: #LookupType.
+	mappedTypeClause := builder newClassNamed: #MappedTypeClause.
+	memberExpression := builder newClassNamed: #MemberExpression.
+	metaProperty := builder newClassNamed: #MetaProperty.
+	methodDefinition := builder newClassNamed: #MethodDefinition.
+	methodSignature := builder newClassNamed: #MethodSignature.
+	module := builder newClassNamed: #Module.
+	namedImports := builder newClassNamed: #NamedImports.
+	namespaceExport := builder newClassNamed: #NamespaceExport.
+	namespaceImport := builder newClassNamed: #NamespaceImport.
+	nestedIdentifier := builder newClassNamed: #NestedIdentifier.
+	nestedTypeIdentifier := builder newClassNamed: #NestedTypeIdentifier.
+	newExpression := builder newClassNamed: #NewExpression.
+	nonNullExpression := builder newClassNamed: #NonNullExpression.
+	null := builder newClassNamed: #Null.
+	number := builder newClassNamed: #Number.
+	object := builder newClassNamed: #Object.
+	objectAssignmentPattern := builder newClassNamed: #ObjectAssignmentPattern.
+	objectPattern := builder newClassNamed: #ObjectPattern.
+	objectType := builder newClassNamed: #ObjectType.
+	omittingTypeAnnotation := builder newClassNamed: #OmittingTypeAnnotation.
+	optingTypeAnnotation := builder newClassNamed: #OptingTypeAnnotation.
+	optionalChain := builder newClassNamed: #OptionalChain.
+	optionalParameter := builder newClassNamed: #OptionalParameter.
+	optionalType := builder newClassNamed: #OptionalType.
+	overrideModifier := builder newClassNamed: #OverrideModifier.
+	pair := builder newClassNamed: #Pair.
+	pairPattern := builder newClassNamed: #PairPattern.
+	parenthesizedExpression := builder newClassNamed: #ParenthesizedExpression.
+	parenthesizedType := builder newClassNamed: #ParenthesizedType.
+	predefinedType := builder newClassNamed: #PredefinedType.
+	privatePropertyIdentifier := builder newClassNamed: #PrivatePropertyIdentifier.
+	program := builder newClassNamed: #Program.
+	propertyIdentifier := builder newClassNamed: #PropertyIdentifier.
+	propertySignature := builder newClassNamed: #PropertySignature.
+	publicFieldDefinition := builder newClassNamed: #PublicFieldDefinition.
+	readonlyType := builder newClassNamed: #ReadonlyType.
+	regex := builder newClassNamed: #Regex.
+	regexFlags := builder newClassNamed: #RegexFlags.
+	regexPattern := builder newClassNamed: #RegexPattern.
+	requiredParameter := builder newClassNamed: #RequiredParameter.
+	restPattern := builder newClassNamed: #RestPattern.
+	restType := builder newClassNamed: #RestType.
+	returnStatement := builder newClassNamed: #ReturnStatement.
+	satisfiesExpression := builder newClassNamed: #SatisfiesExpression.
+	sequenceExpression := builder newClassNamed: #SequenceExpression.
+	shorthandPropertyIdentifier := builder newClassNamed: #ShorthandPropertyIdentifier.
+	shorthandPropertyIdentifierPattern := builder newClassNamed: #ShorthandPropertyIdentifierPattern.
+	spreadElement := builder newClassNamed: #SpreadElement.
+	statementBlock := builder newClassNamed: #StatementBlock.
+	statementIdentifier := builder newClassNamed: #StatementIdentifier.
+	string := builder newClassNamed: #String.
+	stringFragment := builder newClassNamed: #StringFragment.
+	subscriptExpression := builder newClassNamed: #SubscriptExpression.
+	superClass := builder newClassNamed: #SuperClass.
+	switchBody := builder newClassNamed: #SwitchBody.
+	switchCase := builder newClassNamed: #SwitchCase.
+	switchDefault := builder newClassNamed: #SwitchDefault.
+	switchStatement := builder newClassNamed: #SwitchStatement.
+	templateLiteralType := builder newClassNamed: #TemplateLiteralType.
+	templateString := builder newClassNamed: #TemplateString.
+	templateSubstitution := builder newClassNamed: #TemplateSubstitution.
+	templateType := builder newClassNamed: #TemplateType.
+	ternaryExpression := builder newClassNamed: #TernaryExpression.
+	this := builder newClassNamed: #This.
+	thisType := builder newClassNamed: #ThisType.
+	throwStatement := builder newClassNamed: #ThrowStatement.
+	trueClass := builder newClassNamed: #TrueClass.
+	tryStatement := builder newClassNamed: #TryStatement.
+	tupleType := builder newClassNamed: #TupleType.
+	typeAliasDeclaration := builder newClassNamed: #TypeAliasDeclaration.
+	typeAnnotation := builder newClassNamed: #TypeAnnotation.
+	typeArguments := builder newClassNamed: #TypeArguments.
+	typeAssertion := builder newClassNamed: #TypeAssertion.
+	typeIdentifier := builder newClassNamed: #TypeIdentifier.
+	typeParameter := builder newClassNamed: #TypeParameter.
+	typeParameters := builder newClassNamed: #TypeParameters.
+	typePredicate := builder newClassNamed: #TypePredicate.
+	typePredicateAnnotation := builder newClassNamed: #TypePredicateAnnotation.
+	typeQuery := builder newClassNamed: #TypeQuery.
+	unaryExpression := builder newClassNamed: #UnaryExpression.
+	undefined := builder newClassNamed: #Undefined.
+	unionType := builder newClassNamed: #UnionType.
+	updateExpression := builder newClassNamed: #UpdateExpression.
+	variableDeclaration := builder newClassNamed: #VariableDeclaration.
+	variableDeclarator := builder newClassNamed: #VariableDeclarator.
+	whileStatement := builder newClassNamed: #WhileStatement.
+	withStatement := builder newClassNamed: #WithStatement.
+	yieldExpression := builder newClassNamed: #YieldExpression.
 ]
 
 { #category : 'definition' }
 FASTTypeScriptMetamodelGenerator >> defineHierarchy [
 	"define class hierarchy"
-
 	super defineHierarchy.
-
-	"Inheritance"
-
 	entity --|> tEntity.
-	entity --|> tWithComments.
-
-	program --|> tEntity.
-
-	number --|> literal.
-	string --|> literal.
-	null --|> literal.
-	boolean --|> literal.
-	_true --|> boolean.
-	_false --|> boolean.
-
-	abstractClassDeclaration --|> classDeclaration.
-
-	"Traits"
-	literal --|> tLiteral.
-	string --|> #TStringLiteral.
-	boolean --|> #TBooleanLiteral.
-	null --|> #TNullPointerLiteral.
-
-	program --|> tEntity.
+	
 	program --|> #THasImmediateSource.
-	program withPrecedenceOf: #THasImmediateSource.
+_ERROR --|> #THasImmediateSource.
 
-	_ERROR --|> #THasImmediateSource.
-	program withPrecedenceOf: #THasImmediateSource.
-
+	abstractClassDeclaration --|> tDeclaration.
+	ambientDeclaration --|> tDeclaration.
 	classDeclaration --|> tDeclaration.
-	classDeclaration --|> tWithDeclarations.
-	classDeclaration --|> tWithModifiers.
-	classDeclaration --|> tStatement.
-
-	interfaceDeclaration --|> tDeclaration.
-	interfaceDeclaration --|> tWithDeclarations.
-	interfaceDeclaration --|> tWithModifiers.
-	interfaceDeclaration --|> tStatement.
-
-
 	enumDeclaration --|> tDeclaration.
-	enumDeclaration --|> tWithDeclarations.
-	enumDeclaration --|> tWithModifiers.
-	enumDeclaration --|> tStatement.
-
-	typeAnnotation --|> tOptionalField.
-	typeAnnotation --|> tReturnType.
-
-	assertsAnnotation --|> tReturnType.
-
-	identifier --|> tOptionalField.
-
-	typeArguments --|> tOptionalField.
-
-	identifier --|> tExpression.
-	expression --|> tExpression.
-	arrayPattern --|> tExpression.
-	typeIdentifier --|> tExpression.
-	conditionalType --|> tExpression.
-	flowMaybeType --|> tExpression.
-	parenthesizedType --|> tExpression.
-	functionType --|> tExpression.
-	predefinedType --|> tExpression.
-	genericType --|> tExpression.
-	arrayType --|> tExpression.
-	objectType --|> tExpression.
-	privatePropertyIdentifier --|> tExpression.
-	propertyIdentifier --|> tExpression.
-	class --|> tExpression.
-	this --|> tExpression.
-	_super --|> tExpression.
-	array --|> tExpression.
-	undefined --|> tExpression.
-	regex --|> tExpression.
-	arrowFunction --|> tExpression.
-	
-	unionType --|> tExpression.
-	typeArguments --|> tExpression.
+	functionDeclaration --|> tDeclaration.
+	functionSignature --|> tDeclaration.
+	generatorFunctionDeclaration --|> tDeclaration.
+	importAlias --|> tDeclaration.
+	interfaceDeclaration --|> tDeclaration.
+	internalModule --|> tDeclaration.
+	lexicalDeclaration --|> tDeclaration.
+	module --|> tDeclaration.
+	typeAliasDeclaration --|> tDeclaration.
+	variableDeclaration --|> tDeclaration.
+	asExpression --|> tExpression.
+	assignmentExpression --|> tExpression.
+	augmentedAssignmentExpression --|> tExpression.
+	awaitExpression --|> tExpression.
+	binaryExpression --|> tExpression.
+	instantiationExpression --|> tExpression.
+	internalModule --|> tExpression.
+	newExpression --|> tExpression.
+	tPrimaryExpression --|> tExpression.
+	satisfiesExpression --|> tExpression.
+	ternaryExpression --|> tExpression.
 	typeAssertion --|> tExpression.
-	typeParameter --|> tExpression.
-	typeParameters --|> tExpression.
-	typePredicate --|> tExpression.
-	typePredicateAnnotation --|> tExpression.
-	typeQuery --|> tExpression.
-	typeAnnotation --|> tExpression.
-	tupleType --|> tExpression.
-	thisType --|> tExpression.
-	templateType --|> tExpression.
-	templateLiteralType --|> tExpression.
-	readonlyType --|> tExpression.
-	restType --|> tExpression.
-	optionalType --|> tExpression.
-	
+	unaryExpression --|> tExpression.
+	updateExpression --|> tExpression.
+	yieldExpression --|> tExpression.
+	arrayPattern --|> tPattern.
+	identifier --|> tPattern.
+	memberExpression --|> tPattern.
+	nonNullExpression --|> tPattern.
+	objectPattern --|> tPattern.
+	restPattern --|> tPattern.
+	subscriptExpression --|> tPattern.
+	undefined --|> tPattern.
+	array --|> tPrimaryExpression.
+	arrowFunction --|> tPrimaryExpression.
+	callExpression --|> tPrimaryExpression.
+	class --|> tPrimaryExpression.
+	falseClass --|> tPrimaryExpression.
+	functionExpression --|> tPrimaryExpression.
+	generatorFunction --|> tPrimaryExpression.
+	identifier --|> tPrimaryExpression.
+	memberExpression --|> tPrimaryExpression.
+	metaProperty --|> tPrimaryExpression.
+	nonNullExpression --|> tPrimaryExpression.
+	null --|> tPrimaryExpression.
+	number --|> tPrimaryExpression.
+	object --|> tPrimaryExpression.
+	parenthesizedExpression --|> tPrimaryExpression.
+	regex --|> tPrimaryExpression.
+	string --|> tPrimaryExpression.
+	subscriptExpression --|> tPrimaryExpression.
+	superClass --|> tPrimaryExpression.
+	templateString --|> tPrimaryExpression.
+	this --|> tPrimaryExpression.
+	trueClass --|> tPrimaryExpression.
+	undefined --|> tPrimaryExpression.
+	arrayType --|> tPrimaryType.
+	conditionalType --|> tPrimaryType.
+	existentialType --|> tPrimaryType.
+	flowMaybeType --|> tPrimaryType.
+	genericType --|> tPrimaryType.
+	indexTypeQuery --|> tPrimaryType.
+	intersectionType --|> tPrimaryType.
+	literalType --|> tPrimaryType.
+	lookupType --|> tPrimaryType.
+	nestedTypeIdentifier --|> tPrimaryType.
+	objectType --|> tPrimaryType.
+	parenthesizedType --|> tPrimaryType.
+	predefinedType --|> tPrimaryType.
+	templateLiteralType --|> tPrimaryType.
+	thisType --|> tPrimaryType.
+	tupleType --|> tPrimaryType.
+	typeIdentifier --|> tPrimaryType.
+	typeQuery --|> tPrimaryType.
+	unionType --|> tPrimaryType.
+	breakStatement --|> tStatement.
+	continueStatement --|> tStatement.
+	debuggerStatement --|> tStatement.
+	tDeclaration --|> tStatement.
+	doStatement --|> tStatement.
+	emptyStatement --|> tStatement.
+	exportStatement --|> tStatement.
+	expressionStatement --|> tStatement.
+	forInStatement --|> tStatement.
+	forStatement --|> tStatement.
+	ifStatement --|> tStatement.
+	importStatement --|> tStatement.
+	labeledStatement --|> tStatement.
+	returnStatement --|> tStatement.
+	statementBlock --|> tStatement.
+	switchStatement --|> tStatement.
+	throwStatement --|> tStatement.
+	tryStatement --|> tStatement.
+	whileStatement --|> tStatement.
+	withStatement --|> tStatement.
+	callExpression --|> tType.
+	constructorType --|> tType.
+	functionType --|> tType.
+	inferType --|> tType.
+	memberExpression --|> tType.
+	tPrimaryType --|> tType.
+	readonlyType --|> tType.
 
-	binaryExpression --|> expression.
-	unaryExpression --|> expression.
-	memberExpression --|> expression.
-	callExpression --|> expression.
-	asExpression --|> expression.
-	assignmentExpression --|> expression.
-	augmentedAssignmentExpression --|> expression.
-	awaitExpression --|> expression.
-	functionExpression --|> expression.
-	instantiationExpression --|> expression.
-	newExpression --|> expression.
-	nonNullExpression --|> expression.
-	parenthesizedExpression --|> expression.
-	satisfiesExpression --|> expression.
-	sequenceExpression --|> expression.
-	subscriptExpression --|> expression.
-	ternaryExpression --|> expression.
-	updateExpression --|> expression.
-	yieldExpression --|> expression.
-	object --|> expression.
-
-	statement --|> tStatement.
-	breakStatement --|> statement.
-	labeledStatement --|> statement.
-	statementIdentifier --|> statement.
-	doStatement --|> statement.
-	importStatement --|> statement.
-	debuggerStatement --|> statement.
-	exportStatement --|> statement.
-	switchStatement --|> statement.
-	forStatement --|> statement.
-	returnStatement --|> statement.
-	withStatement --|> statement.
-	throwStatement --|> statement.
-	emptyStatement --|> statement.
-	tryStatement --|> statement.
-	ifStatement --|> statement.
-	forInStatement --|> statement.
-	statementBlock --|> statement.
-	continueStatement --|> statement.
-	expressionStatement --|> statement.
-	expressionStatement --|> #TExpressionStatement .
-	whileStatement --|> statement.
-
-	typePredicateAnnotation --|> typeAnnotation
-
-	"_function_type  --|> tWithParameters.	"
 ]
 
 { #category : 'definition' }
 FASTTypeScriptMetamodelGenerator >> defineRelations [
-
 	super defineRelations.
-	(entity property: #genericChildren)
-	<>-* (entity property: #genericParent).
-	(entity property: #value) <>-* (entity property: #valueParent).
-
-	((program property: #classDeclarations) comment:
-		 'The class declarations that I define')
-	<>-*
-		((classDeclaration property: #programClassDeclarationOwner)
-			 comment: 'The program that contains me').
-
-	((program property: #enumDeclarations) comment:
-		 'The enum declarations that I define')
-	<>-*
-		((enumDeclaration property: #programEnumDeclarationOwner) comment:
-			 'The program that contains me').
-
-	((program property: #interfaceDeclarations) comment:
-		 'The interface declarations that I define')
-	<>-*
-		((interfaceDeclaration property: #programInterfaceDeclarationOwner)
-			 comment: 'The program that contains me').
-
-	((forInStatement property: #left) comment:
-		 'The left operand (if possible)')
-	<>-
-	((tExpression property: #forStatementLeftOwner) comment: 'My owner').
-
-	((forInStatement property: #right) comment:
-		 'The right operand (if possible)')
-	<>-
-	((tExpression property: #forStatementRightOwner) comment: 'My owner').
-
-	((forInStatement property: #body) comment: 'My body')
-	<>- ((statementBlock property: #forInStatementBodyOwner) comment:
-			 'The owner of this body').
-
-	((binaryExpression property: #left) comment:
-		 'The left operand (if possible)')
-	<>- ((tExpression property: #binaryExpressionLeftOwner) comment:
-			 'My Owner').
-	((binaryExpression property: #right) comment:
-		 'The right operand (if possible)')
-	<>- ((tExpression property: #binaryExpressionRightOwner) comment:
-			 'My Owner').
-			
-			"--- FOR STATEMENT RELATIONS ---"
-		(forStatement property: #initializer) <>- (lexicalDeclaration property: #forInitializerOwner).
-		(forStatement property: #condition) <>- (binaryExpression property: #forConditionOwner).
-    	(forStatement property: #increment) <>- (updateExpression property: #forIncrementOwner).
-    	(forStatement property: #body) <>- (statementBlock property: #forBodyOwner).
-
-
-	((newExpression property: #constructor) comment:
-		 'The constructor of the new expression')
-	<>- ((tExpression property: #newExpressionConstructorOwner) comment:
-			 'The owner of this constructor').
-
-	((newExpression property: #arguments) comment:
-		 'The arguments of the new expression')
-	<>- ((arguments property: #newExpressionArgumentsOwner) comment:
-			 'The owner of these arguments').
-
-	((newExpression property: #type_arguments) comment:
-		 'The type arguments of the new expression if they exist between <>')
-	<>-
-		((typeArguments property: #newExpressionTypeArgumentsOwner)
-			 comment: 'The owner of these type arguments').
-
-	((indexSignature property: #index_type) comment: 'My type idetifier')
-	<>-
-		((typeIdentifier property: #indexSignatureIndexTypeOwner) comment:
-			 'The owner of this index type').
-
-	((indexSignature property: #type) comment: 'My annotation type')
-	<>- ((typeAnnotation property: #indexSignatureTypeOwner) comment:
-			 'The owner of this type').
-
-	((indexSignature property: #name) comment: 'My name')
-	<>- ((identifier property: #indexSignatureNameOwner) comment:
-			 'The owner of this identifier').
-
-	((functionType property: #return_type) comment: 'My return type')
-	<>- ((tExpression property: #functionTypeReturnTypeOwner) comment:
-			 'The owner of this type').
-
-	((functionType property: #parameters) comment: 'My parameters')
-	<>-
-		((formalParameters property: #functionTypeParametersOwner) comment:
-			 'My owner').
-
-	((unaryExpression property: #argument) comment: 'My argument')
-	<>- ((tExpression property: #unaryExpressionArgumentOwner) comment:
-			 'The owner of this class').
-
-	((extendsTypeClause property: #type) comment: 'My type identifier')
-	<>- ((typeIdentifier property: #extendsTypeClauseTypeOwner) comment:
-			 'The owner of this type identifier').
-
-	((withStatement property: #object) comment:
-		 'My object as parenthesized expression')
-	<>- ((parenthesizedExpression property: #withStatementObjectOwner)
-			 comment: 'The owner of this type parenthesized expression').
-
-	((withStatement property: #body) comment:
-		 'My body as statement block')
-	<>- ((statementBlock property: #withStatementBodyOwner) comment:
-			 'The owner of this statement block').
-
-	((nestedIdentifier property: #object) comment:
-		 'My object as identifier')
-	<>- ((identifier property: #nestedIdentifierObjectOwner) comment:
-			 'The owner of this identifier').
-
-	((nestedIdentifier property: #property) comment:
-		 'My property as property identifier')
-	<>- ((propertyIdentifier property: #nestedIdentifierPropertyOwner)
-			 comment: 'The owner of this  property identifier').
-
-	((genericType property: #name) comment: 'My name as type identifier')
-	<>- ((typeIdentifier property: #genericTypeNameOwner) comment:
-			 'The owner of this type identifier').
-
-	((genericType property: #type_arguments) comment:
-		 'My name as type identifier')
-	<>-
-		((typeArguments property: #genericTypeTypeArgumentsOwner) comment:
-			 'The owner of this type arguments').
-
-	((constructorType property: #type) comment:
-		 'My type as type identifier')
-	<>- ((typeIdentifier property: #constructorTypeTypeOwner) comment:
-			 'The owner of this type identifier').
-
-	((constructorType property: #parameters) comment: 'My parameters')
-	<>- ((formalParameters property: #constructorTypeParametersOwner)
-			 comment: 'The owner of these formal parameters').
-
-	((optionalParameter property: #type) comment:
-		 'My type as type annotation')
-	<>- ((typeAnnotation property: #optionalParameterTypeOwner) comment:
-			 'The owner of this type annotation').
-
-	((optionalParameter property: #pattern) comment:
-		 'My pattern as identifier')
-	<>- ((identifier property: #optionalParameterPatternOwner) comment:
-			 'The owner of this identifier').
-
-	((ifStatement property: #condition) comment:
-		 'My condition as parenthesized expression')
-	<>- ((parenthesizedExpression property: #ifStatementConditionOwner)
-			 comment: 'The owner of this  parenthesized expression').
-
-	((ifStatement property: #consequence) comment:
-		 'My consequence as statement block')
-	<>-
-		((statementBlock property: #ifStatementConsequenceOwner) comment:
-			 'The owner of this statement block').
-
-	((augmentedAssignmentExpression property: #left) comment: 'left')
-	<>- ((tExpression property: #augmentedAssignmentExpressionLeftOwner)
-			 comment: 'The left operand (if possible)').
-
-	((augmentedAssignmentExpression property: #right) comment: 'right')
-	<>-
-		((tExpression property: #augmentedAssignmentExpressionRightOwner)
-			 comment: 'The right operand (if possible)').
-
-	((conditionalType property: #left) comment: 'left')
-	<>- ((tExpression property: #conditionalTypeLeftOwner) comment:
-			 'The left operand (if possible)').
-
-	((conditionalType property: #right) comment: 'right')
-	<>- ((tExpression property: #conditionalTypeRightOwner) comment:
-			 'The right operand (if possible)').
-
-	((conditionalType property: #alternative) comment: 'alternative')
-	<>-
-		((tExpression property: #conditionalTypeAlternativeOwner) comment:
-			 'Alternative owner').
-
-	((conditionalType property: #consequence) comment: 'consequence')
-	<>-
-		((tExpression property: #conditionalTypeConsequenceOwner) comment:
-			 'Consequence owner').
-
-	((tryStatement property: #body) comment: 'Body')
-	<>- ((statementBlock property: #tryStatementBodyOwner) comment:
-			 'Try statement owner').
-
-	((tryStatement property: #handler) comment: 'Handler')
-	<>- ((catchClause property: #tryStatementHandlerOwner) comment:
-			 'Try statement owner').
-
-	((tryStatement property: #finalizer) comment: 'Finalizer')
-	<>- ((finallyClause property: #tryStatementFinalizerOwner) comment:
-			 'Try statement owner').
-
-	((memberExpression property: #object) comment: 'Object')
-	<>- ((tExpression property: #memberExpressionObjectOwner) comment:
-			 'This owner').
-
-	((memberExpression property: #property) comment: 'Property')
-	<>- ((tExpression property: #memberExpressionPropertyOwner) comment:
-			 'My owner').
-
-	((exportSpecifier property: #name) comment: 'Name')
-	<>-
-	((identifier property: #exportSpecifierNameOwner) comment: 'My owner').
-
-	((exportSpecifier property: #alias) comment:
-		 'My alias in case it exists')
-	<>- ((tOptionalField property: #exportSpecifierAliasOwner) comment:
-			 'My owner').
-
-	((methodDefinition property: #return_type) comment:
-		 'My return type in case it exists')
-	<>-
-		((tOptionalField property: #methodDefinitionReturnTypeOwner)
-			 comment: 'My owner').
-
-	((methodDefinition property: #name) comment: 'My name')
-	<>-
-		((propertyIdentifier property: #methodDefinitionNameOwner) comment:
-			 'My owner').
-
-	((methodDefinition property: #body) comment: 'My body')
-	<>- ((statementBlock property: #methodDefinitionBodyOwner) comment:
-			 'My owner').
-
-	((methodDefinition property: #parameters) comment: 'My parameters')
-	<>- ((formalParameters property: #methodDefinitionParametersOwner)
-			 comment: 'My owner').
-
-	((finallyClause property: #body) comment: 'My body')
-	<>- ((statementBlock property: #finallyClauseBodyOwner) comment:
-			 'My owner').
-
-	((extendsClause property: #type_arguments) comment:
-		 'My type arguments')
-	<>-
-		((typeArguments property: #extendsClauseTypeArgumentsOwner)
-			 comment: 'My owner').
-
-	((subscriptExpression property: #object) comment: 'My identifier')
-	<>-
-		((tExpression property: #subscriptExpressionObjectOwner) comment:
-			 'My owner').
-
-	((subscriptExpression property: #index) comment: 'My index')
-	<>- ((tExpression property: #subscriptExpressionIndexOwner) comment:
-			 'My owner').
-
-	"((extendsClause property: #value) comment:
-		 'My value')
-	<>- ((identifier property: #extendsClauseValueOwner) comment: 'My owner')."
-
-	((assignmentExpression property: #left) comment: 'The left operand')
-	<>- ((tExpression property: #assignmentExpressionLeftOwner) comment:
-			 'The expression parent').
-
-	((assignmentExpression property: #right) comment: 'The right operand')
-	<>-
-		((tExpression property: #assignmentExpressionRightOwner) comment:
-			 'The expression parent').
-
-	"((variableDeclarator property: #name) comment:
-		 'The identifier')
-	<>- ((identifier property: #variableDeclaratorNameOwner) comment:
-			 'My owner'). 
-	
-	((variableDeclarator property: #value) comment:
-		 'The value')
-	<>- ((tExpression property: #variableDeclaratorValueOwner) comment:
-			 'My owner'). "
-
-	"function declaration"
-	((functionDeclaration property: #name) comment:
-		 'The name of the function')
-	<>- ((identifier property: #functionDeclarationNameOwner) comment:
-			 'My owner').
-
-	((functionDeclaration property: #parameters) comment:
-		 'The parameters of the function')
-	<>-
-		((formalParameters property: #functionDeclarationParametersOwner)
-			 comment: 'My owner').
-
-	((functionDeclaration property: #body) comment:
-		 'The body of the function')
-	<>-
-		((statementBlock property: #functionDeclarationBodyOwner) comment:
-			 'My owner').
-
-	((functionDeclaration property: #return_type) comment:
-		 'The return type of the function (in case it exists)')
-	<>-
-		((tReturnType property: #functionDeclarationReturnTypeOwner)
-			 comment: 'My owner').
-			
-	
-		
-		
-
-	"class declaration"
-	((classDeclaration property: #body) comment: 'The body of the class')
-	<>- ((classBody property: #classDeclarationBodyOwner) comment:
-			 'The class declaration that contains me').
-
-	((classDeclaration property: #name) comment: 'The name of the class')
-	<>- ((typeIdentifier property: #classDeclarationNameOwner) comment:
-			 'My owner').
-
-	"Enum"
-  
-	((enumDeclaration property: #body) comment: 'The body of the enum')
-	<>- ((enumBody property: #enumDeclarationBodyOwner) comment:
-			 'The enum declaration that contains me').
-
-
-	((enumDeclaration property: #name) comment: 'The name of the enum')
-	<>-
-	((identifier property: #enumDeclarationNameOwner) comment: 'My owner').
-
-	"Interface"
-	((interfaceDeclaration property: #name) comment: 'My name')
-	<>-
-		((typeIdentifier property: #interfaceDeclarationNameOwner) comment:
-			 'My owner').
-
-	((interfaceDeclaration property: #body) comment:
-		 'The body of the interface')
-	<>-
-		((interfaceBody property: #interfaceDeclarationBodyOwner) comment:
-			 'The interface declaration that contains me').
-
-	"Traits"
-	((tWithDeclarations property: #declarations) comment:
-		 'The elements I declare')
-	<>-* ((tDeclaration property: #tWithDeclarationsDeclarationsOwner)
-			 comment: 'The element that declares me').
-
-	((tWithModifiers property: #modifiers) comment: 'My modifiers')
-	<>-* ((tModifier property: #tWithModifiersModifiersOwner) comment:
-			 'The owner of the modifier').
-			
-	"-----------------------"
-	"Arguments"
-	((arguments property: #argumentsList) comment: 'The list of arguments (expressions or spread elements)')
-	<>-* ((tEntity property: #argumentsOwner) comment: 'The arguments node that owns me').
-	
-	((arrowFunction property: #parameter) comment: 'The single parameter of the arrow function') 
-		<>- ((identifier property: #arrowFunctionParameterOwner) comment: 'My owner').
-		
-	((arrowFunction property: #parameters) comment: 'The parameters of the arrow function') 
-		<>- ((formalParameters property: #arrowFunctionParametersOwner) comment: 'My owner').
-		
-	((arrowFunction property: #body) comment: 'The body of the arrow function') 
-		<>- ((tEntity property: #arrowFunctionBodyOwner) comment: 'My owner').
-		
-
-	"DoStatement"	
-		(doStatement property: #condition) <>- (parenthesizedExpression property: #doConditionOwner).
-		(doStatement property: #body) <>- (tStatement property: #doBodyOwner).
-			
-	"ExpressionStatement"
-	((expressionStatement property: #expression) comment: 'The expression contained in the statement')
-		<>- (tExpression property: #expressionStatementOwner ).
-		
-	((formalParameters property: #parameters) comment: 'The list of parameters') 
-		<>-* ((tEntity property: #parentFormalParameters) comment: 'My owner').
-		
-	(ifStatement property: #alternative) <>- (elseClause property: #ifStatementAlternativeOwner ).
-	
-	"RequiredParameter"
-	((requiredParameter property: #pattern) comment: 'The pattern (the name) of the required parameter') 
-		<>- (identifier property: #requiredParameterPatternOwner ).
-	((requiredParameter property: #type) comment: 'The type of the parameter (optional)') 
-		<>- (tOptionalField property: #requiredParameterTypeOwner  ).
-		
-	"TernaryExpression"	
-	(ternaryExpression property: #condition) <>- (tExpression property: #ternaryExpressionconditionOwner ).
-	(ternaryExpression property: #consequence ) <>- (tExpression property: #ternaryExpressionConsequenceOwner ).
-	(ternaryExpression property: #alternative) <>- (tExpression property: #ternaryExpressionAlternativeOwner ).
-	
-	(whileStatement property: #condition) <>- (parenthesizedExpression property: #whileConditionOwner).
-	(whileStatement property: #body) <>- (tStatement property: #whileBodyOwner).
+
+	(entity property: #'genericChildren') <>-* (entity property: #'genericParent').
+
+
+	" ABSTRACT_CLASS_DECLARATION "
+	((abstractClassDeclaration property: #decorator) comment: '')
+		<>-* ((decorator property: #abstractClassDeclarationDecoratorOwner) comment: '').
+
+	((abstractClassDeclaration property: #name) comment: '')
+		<>- ((typeIdentifier property: #abstractClassDeclarationNameOwner) comment: '').
+
+	((abstractClassDeclaration property: #body) comment: '')
+		<>- ((classBody property: #abstractClassDeclarationBodyOwner) comment: '').
+
+	((abstractClassDeclaration property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #abstractClassDeclarationTypeParametersOwner) comment: '').
+
+
+	" ABSTRACT_METHOD_SIGNATURE "
+	((abstractMethodSignature property: #returnType) comment: '')
+		<>- ((tEntity property: #abstractMethodSignatureReturnTypeOwner) comment: '').
+
+	((abstractMethodSignature property: #name) comment: '')
+		<>- ((tEntity property: #abstractMethodSignatureNameOwner) comment: '').
+
+	((abstractMethodSignature property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #abstractMethodSignatureTypeParametersOwner) comment: '').
+
+	((abstractMethodSignature property: #parameters) comment: '')
+		<>- ((formalParameters property: #abstractMethodSignatureParametersOwner) comment: '').
+
+
+	" AMBIENT_DECLARATION (COLLECTION) "
+	((ambientDeclaration property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #ambientDeclarationOwner) comment: '').
+
+
+	" ARGUMENTS (COLLECTION) "
+	((arguments property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #argumentsOwner) comment: '').
+
+
+	" ARRAY (COLLECTION) "
+	((array property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #arrayOwner) comment: '').
+
+
+	" ARRAY_PATTERN (COLLECTION) "
+	((arrayPattern property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #arrayPatternOwner) comment: '').
+
+
+	" ARROW_FUNCTION "
+	((arrowFunction property: #parameters) comment: '')
+		<>- ((formalParameters property: #arrowFunctionParametersOwner) comment: '').
+
+	((arrowFunction property: #body) comment: '')
+		<>- ((tEntity property: #arrowFunctionBodyOwner) comment: '').
+
+	((arrowFunction property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #arrowFunctionTypeParametersOwner) comment: '').
+
+	((arrowFunction property: #parameter) comment: '')
+		<>- ((identifier property: #arrowFunctionParameterOwner) comment: '').
+
+	((arrowFunction property: #returnType) comment: '')
+		<>- ((tEntity property: #arrowFunctionReturnTypeOwner) comment: '').
+
+
+	" AS_EXPRESSION (COLLECTION) "
+	((asExpression property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #asExpressionOwner) comment: '').
+
+
+	" ASSIGNMENT_EXPRESSION "
+	((assignmentExpression property: #right) comment: '')
+		<>- ((tExpression property: #assignmentExpressionRightOwner) comment: '').
+
+	((assignmentExpression property: #left) comment: '')
+		<>- ((tEntity property: #assignmentExpressionLeftOwner) comment: '').
+
+
+	" ASSIGNMENT_PATTERN "
+	((assignmentPattern property: #right) comment: '')
+		<>- ((tExpression property: #assignmentPatternRightOwner) comment: '').
+
+	((assignmentPattern property: #left) comment: '')
+		<>- ((tPattern property: #assignmentPatternLeftOwner) comment: '').
+
+
+	" AUGMENTED_ASSIGNMENT_EXPRESSION "
+	((augmentedAssignmentExpression property: #operator) comment: '')
+		<>- ((tEntity property: #augmentedAssignmentExpressionOperatorOwner) comment: '').
+
+	((augmentedAssignmentExpression property: #right) comment: '')
+		<>- ((tExpression property: #augmentedAssignmentExpressionRightOwner) comment: '').
+
+	((augmentedAssignmentExpression property: #left) comment: '')
+		<>- ((tEntity property: #augmentedAssignmentExpressionLeftOwner) comment: '').
+
+
+	" BINARY_EXPRESSION "
+	((binaryExpression property: #operator) comment: '')
+		<>- ((tEntity property: #binaryExpressionOperatorOwner) comment: '').
+
+	((binaryExpression property: #right) comment: '')
+		<>- ((tExpression property: #binaryExpressionRightOwner) comment: '').
+
+	((binaryExpression property: #left) comment: '')
+		<>- ((tEntity property: #binaryExpressionLeftOwner) comment: '').
+
+
+	" BREAK_STATEMENT "
+	((breakStatement property: #label) comment: '')
+		<>- ((statementIdentifier property: #breakStatementLabelOwner) comment: '').
+
+
+	" CALL_EXPRESSION "
+	((callExpression property: #typeArguments) comment: '')
+		<>- ((typeArguments property: #callExpressionTypeArgumentsOwner) comment: '').
+
+	((callExpression property: #function) comment: '')
+		<>- ((tEntity property: #callExpressionFunctionOwner) comment: '').
+
+	((callExpression property: #arguments) comment: '')
+		<>- ((tEntity property: #callExpressionArgumentsOwner) comment: '').
+
+
+	" CALL_SIGNATURE "
+	((callSignature property: #returnType) comment: '')
+		<>- ((tEntity property: #callSignatureReturnTypeOwner) comment: '').
+
+	((callSignature property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #callSignatureTypeParametersOwner) comment: '').
+
+	((callSignature property: #parameters) comment: '')
+		<>- ((formalParameters property: #callSignatureParametersOwner) comment: '').
+
+
+	" CATCH_CLAUSE "
+	((catchClause property: #parameter) comment: '')
+		<>- ((tEntity property: #catchClauseParameterOwner) comment: '').
+
+	((catchClause property: #body) comment: '')
+		<>- ((statementBlock property: #catchClauseBodyOwner) comment: '').
+
+	((catchClause property: #type) comment: '')
+		<>- ((typeAnnotation property: #catchClauseTypeOwner) comment: '').
+
+
+	" CLASS "
+	((class property: #decorator) comment: '')
+		<>-* ((decorator property: #classDecoratorOwner) comment: '').
+
+	((class property: #name) comment: '')
+		<>- ((typeIdentifier property: #classNameOwner) comment: '').
+
+	((class property: #body) comment: '')
+		<>- ((classBody property: #classBodyOwner) comment: '').
+
+	((class property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #classTypeParametersOwner) comment: '').
+
+
+	" CLASS_BODY "
+	((classBody property: #decorator) comment: '')
+		<>-* ((decorator property: #classBodyDecoratorOwner) comment: '').
+
+
+	" CLASS_DECLARATION "
+	((classDeclaration property: #decorator) comment: '')
+		<>-* ((decorator property: #classDeclarationDecoratorOwner) comment: '').
+
+	((classDeclaration property: #name) comment: '')
+		<>- ((typeIdentifier property: #classDeclarationNameOwner) comment: '').
+
+	((classDeclaration property: #body) comment: '')
+		<>- ((classBody property: #classDeclarationBodyOwner) comment: '').
+
+	((classDeclaration property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #classDeclarationTypeParametersOwner) comment: '').
+
+
+	" CLASS_HERITAGE (COLLECTION) "
+	((classHeritage property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #classHeritageOwner) comment: '').
+
+
+	" CLASS_STATIC_BLOCK "
+	((classStaticBlock property: #body) comment: '')
+		<>- ((statementBlock property: #classStaticBlockBodyOwner) comment: '').
+
+
+	" CONDITIONAL_TYPE "
+	((conditionalType property: #left) comment: '')
+		<>- ((tType property: #conditionalTypeLeftOwner) comment: '').
+
+	((conditionalType property: #right) comment: '')
+		<>- ((tType property: #conditionalTypeRightOwner) comment: '').
+
+	((conditionalType property: #alternative) comment: '')
+		<>- ((tType property: #conditionalTypeAlternativeOwner) comment: '').
+
+	((conditionalType property: #consequence) comment: '')
+		<>- ((tType property: #conditionalTypeConsequenceOwner) comment: '').
+
+
+	" CONSTRUCT_SIGNATURE "
+	((constructSignature property: #type) comment: '')
+		<>- ((typeAnnotation property: #constructSignatureTypeOwner) comment: '').
+
+	((constructSignature property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #constructSignatureTypeParametersOwner) comment: '').
+
+	((constructSignature property: #parameters) comment: '')
+		<>- ((formalParameters property: #constructSignatureParametersOwner) comment: '').
+
+
+	" CONSTRUCTOR_TYPE "
+	((constructorType property: #type) comment: '')
+		<>- ((tType property: #constructorTypeTypeOwner) comment: '').
+
+	((constructorType property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #constructorTypeTypeParametersOwner) comment: '').
+
+	((constructorType property: #parameters) comment: '')
+		<>- ((formalParameters property: #constructorTypeParametersOwner) comment: '').
+
+
+	" CONTINUE_STATEMENT "
+	((continueStatement property: #label) comment: '')
+		<>- ((statementIdentifier property: #continueStatementLabelOwner) comment: '').
+
+
+	" DO_STATEMENT "
+	((doStatement property: #condition) comment: '')
+		<>- ((parenthesizedExpression property: #doStatementConditionOwner) comment: '').
+
+	((doStatement property: #body) comment: '')
+		<>- ((tStatement property: #doStatementBodyOwner) comment: '').
+
+
+	" ENUM_ASSIGNMENT "
+	((enumAssignment property: #name) comment: '')
+		<>- ((tEntity property: #enumAssignmentNameOwner) comment: '').
+
+	((enumAssignment property: #value) comment: '')
+		<>- ((tExpression property: #enumAssignmentValueOwner) comment: '').
+
+
+	" ENUM_BODY "
+	((enumBody property: #name) comment: '')
+		<>-* ((tEntity property: #enumBodyNameOwner) comment: '').
+
+
+	" ENUM_DECLARATION "
+	((enumDeclaration property: #name) comment: '')
+		<>- ((identifier property: #enumDeclarationNameOwner) comment: '').
+
+	((enumDeclaration property: #body) comment: '')
+		<>- ((enumBody property: #enumDeclarationBodyOwner) comment: '').
+
+
+	" EXPORT_CLAUSE (COLLECTION) "
+	((exportClause property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #exportClauseOwner) comment: '').
+
+
+	" EXPORT_SPECIFIER "
+	((exportSpecifier property: #alias) comment: '')
+		<>- ((tPrimaryExpression property: #exportSpecifierAliasOwner) comment: '').
+
+	((exportSpecifier property: #name) comment: '')
+		<>- ((tPrimaryExpression property: #exportSpecifierNameOwner) comment: '').
+
+
+	" EXPORT_STATEMENT "
+	((exportStatement property: #declaration) comment: '')
+		<>- ((tDeclaration property: #exportStatementDeclarationOwner) comment: '').
+
+	((exportStatement property: #decorator) comment: '')
+		<>-* ((decorator property: #exportStatementDecoratorOwner) comment: '').
+
+	((exportStatement property: #source) comment: '')
+		<>- ((string property: #exportStatementSourceOwner) comment: '').
+
+	((exportStatement property: #value) comment: '')
+		<>- ((tExpression property: #exportStatementValueOwner) comment: '').
+
+
+	" EXTENDS_CLAUSE "
+	((extendsClause property: #value) comment: '')
+		<>-* ((tExpression property: #extendsClauseValueOwner) comment: '').
+
+	((extendsClause property: #typeArguments) comment: '')
+		<>-* ((typeArguments property: #extendsClauseTypeArgumentsOwner) comment: '').
+
+
+	" EXTENDS_TYPE_CLAUSE "
+	((extendsTypeClause property: #type) comment: '')
+		<>-* ((tPrimaryType property: #extendsTypeClauseTypeOwner) comment: '').
+
+
+	" FINALLY_CLAUSE "
+	((finallyClause property: #body) comment: '')
+		<>- ((statementBlock property: #finallyClauseBodyOwner) comment: '').
+
+
+	" FOR_IN_STATEMENT "
+	((forInStatement property: #value) comment: '')
+		<>- ((tExpression property: #forInStatementValueOwner) comment: '').
+
+	((forInStatement property: #body) comment: '')
+		<>- ((tStatement property: #forInStatementBodyOwner) comment: '').
+
+	((forInStatement property: #left) comment: '')
+		<>- ((tEntity property: #forInStatementLeftOwner) comment: '').
+
+	((forInStatement property: #right) comment: '')
+		<>- ((tEntity property: #forInStatementRightOwner) comment: '').
+
+	((forInStatement property: #operator) comment: '')
+		<>- ((tEntity property: #forInStatementOperatorOwner) comment: '').
+
+	((forInStatement property: #kind) comment: '')
+		<>- ((tEntity property: #forInStatementKindOwner) comment: '').
+
+
+	" FOR_STATEMENT "
+	((forStatement property: #initializer) comment: '')
+		<>- ((tEntity property: #forStatementInitializerOwner) comment: '').
+
+	((forStatement property: #condition) comment: '')
+		<>- ((tEntity property: #forStatementConditionOwner) comment: '').
+
+	((forStatement property: #increment) comment: '')
+		<>- ((tEntity property: #forStatementIncrementOwner) comment: '').
+
+	((forStatement property: #body) comment: '')
+		<>- ((tStatement property: #forStatementBodyOwner) comment: '').
+
+
+	" FORMAL_PARAMETERS (COLLECTION) "
+	((formalParameters property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #formalParametersOwner) comment: '').
+
+
+	" FUNCTION_DECLARATION "
+	((functionDeclaration property: #parameters) comment: '')
+		<>- ((formalParameters property: #functionDeclarationParametersOwner) comment: '').
+
+	((functionDeclaration property: #body) comment: '')
+		<>- ((statementBlock property: #functionDeclarationBodyOwner) comment: '').
+
+	((functionDeclaration property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #functionDeclarationTypeParametersOwner) comment: '').
+
+	((functionDeclaration property: #returnType) comment: '')
+		<>- ((tEntity property: #functionDeclarationReturnTypeOwner) comment: '').
+
+	((functionDeclaration property: #name) comment: '')
+		<>- ((identifier property: #functionDeclarationNameOwner) comment: '').
+
+
+	" FUNCTION_EXPRESSION "
+	((functionExpression property: #parameters) comment: '')
+		<>- ((formalParameters property: #functionExpressionParametersOwner) comment: '').
+
+	((functionExpression property: #body) comment: '')
+		<>- ((statementBlock property: #functionExpressionBodyOwner) comment: '').
+
+	((functionExpression property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #functionExpressionTypeParametersOwner) comment: '').
+
+	((functionExpression property: #returnType) comment: '')
+		<>- ((tEntity property: #functionExpressionReturnTypeOwner) comment: '').
+
+	((functionExpression property: #name) comment: '')
+		<>- ((identifier property: #functionExpressionNameOwner) comment: '').
+
+
+	" FUNCTION_SIGNATURE "
+	((functionSignature property: #returnType) comment: '')
+		<>- ((tEntity property: #functionSignatureReturnTypeOwner) comment: '').
+
+	((functionSignature property: #name) comment: '')
+		<>- ((identifier property: #functionSignatureNameOwner) comment: '').
+
+	((functionSignature property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #functionSignatureTypeParametersOwner) comment: '').
+
+	((functionSignature property: #parameters) comment: '')
+		<>- ((formalParameters property: #functionSignatureParametersOwner) comment: '').
+
+
+	" FUNCTION_TYPE "
+	((functionType property: #returnType) comment: '')
+		<>- ((tEntity property: #functionTypeReturnTypeOwner) comment: '').
+
+	((functionType property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #functionTypeTypeParametersOwner) comment: '').
+
+	((functionType property: #parameters) comment: '')
+		<>- ((formalParameters property: #functionTypeParametersOwner) comment: '').
+
+
+	" GENERATOR_FUNCTION "
+	((generatorFunction property: #parameters) comment: '')
+		<>- ((formalParameters property: #generatorFunctionParametersOwner) comment: '').
+
+	((generatorFunction property: #body) comment: '')
+		<>- ((statementBlock property: #generatorFunctionBodyOwner) comment: '').
+
+	((generatorFunction property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #generatorFunctionTypeParametersOwner) comment: '').
+
+	((generatorFunction property: #returnType) comment: '')
+		<>- ((tEntity property: #generatorFunctionReturnTypeOwner) comment: '').
+
+	((generatorFunction property: #name) comment: '')
+		<>- ((identifier property: #generatorFunctionNameOwner) comment: '').
+
+
+	" GENERATOR_FUNCTION_DECLARATION "
+	((generatorFunctionDeclaration property: #parameters) comment: '')
+		<>- ((formalParameters property: #generatorFunctionDeclarationParametersOwner) comment: '').
+
+	((generatorFunctionDeclaration property: #body) comment: '')
+		<>- ((statementBlock property: #generatorFunctionDeclarationBodyOwner) comment: '').
+
+	((generatorFunctionDeclaration property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #generatorFunctionDeclarationTypeParametersOwner) comment: '').
+
+	((generatorFunctionDeclaration property: #returnType) comment: '')
+		<>- ((tEntity property: #generatorFunctionDeclarationReturnTypeOwner) comment: '').
+
+	((generatorFunctionDeclaration property: #name) comment: '')
+		<>- ((identifier property: #generatorFunctionDeclarationNameOwner) comment: '').
+
+
+	" GENERIC_TYPE "
+	((genericType property: #name) comment: '')
+		<>- ((tPrimaryType property: #genericTypeNameOwner) comment: '').
+
+	((genericType property: #typeArguments) comment: '')
+		<>- ((typeArguments property: #genericTypeTypeArgumentsOwner) comment: '').
+
+
+	" IF_STATEMENT "
+	((ifStatement property: #condition) comment: '')
+		<>- ((parenthesizedExpression property: #ifStatementConditionOwner) comment: '').
+
+	((ifStatement property: #alternative) comment: '')
+		<>- ((elseClause property: #ifStatementAlternativeOwner) comment: '').
+
+	((ifStatement property: #consequence) comment: '')
+		<>- ((tStatement property: #ifStatementConsequenceOwner) comment: '').
+
+
+	" IMPLEMENTS_CLAUSE (COLLECTION) "
+	((implementsClause property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #implementsClauseOwner) comment: '').
+
+
+	" IMPORT_ALIAS (COLLECTION) "
+	((importAlias property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #importAliasOwner) comment: '').
+
+
+	" IMPORT_CLAUSE (COLLECTION) "
+	((importClause property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #importClauseOwner) comment: '').
+
+
+	" IMPORT_REQUIRE_CLAUSE "
+	((importRequireClause property: #source) comment: '')
+		<>- ((string property: #importRequireClauseSourceOwner) comment: '').
+
+
+	" IMPORT_SPECIFIER "
+	((importSpecifier property: #alias) comment: '')
+		<>- ((identifier property: #importSpecifierAliasOwner) comment: '').
+
+	((importSpecifier property: #name) comment: '')
+		<>- ((tPrimaryExpression property: #importSpecifierNameOwner) comment: '').
+
+
+	" IMPORT_STATEMENT "
+	((importStatement property: #source) comment: '')
+		<>- ((string property: #importStatementSourceOwner) comment: '').
+
+
+	" INDEX_SIGNATURE "
+	((indexSignature property: #sign) comment: '')
+		<>- ((tEntity property: #indexSignatureSignOwner) comment: '').
+
+	((indexSignature property: #indexType) comment: '')
+		<>- ((tType property: #indexSignatureIndexTypeOwner) comment: '').
+
+	((indexSignature property: #name) comment: '')
+		<>- ((identifier property: #indexSignatureNameOwner) comment: '').
+
+	((indexSignature property: #type) comment: '')
+		<>- ((tEntity property: #indexSignatureTypeOwner) comment: '').
+
+
+	" INFER_TYPE (COLLECTION) "
+	((inferType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #inferTypeOwner) comment: '').
+
+
+	" INSTANTIATION_EXPRESSION "
+	((instantiationExpression property: #function) comment: '')
+		<>- ((tEntity property: #instantiationExpressionFunctionOwner) comment: '').
+
+	((instantiationExpression property: #typeArguments) comment: '')
+		<>- ((typeArguments property: #instantiationExpressionTypeArgumentsOwner) comment: '').
+
+
+	" INTERFACE_BODY (COLLECTION) "
+	((interfaceBody property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #interfaceBodyOwner) comment: '').
+
+
+	" INTERFACE_DECLARATION "
+	((interfaceDeclaration property: #name) comment: '')
+		<>- ((typeIdentifier property: #interfaceDeclarationNameOwner) comment: '').
+
+	((interfaceDeclaration property: #body) comment: '')
+		<>- ((interfaceBody property: #interfaceDeclarationBodyOwner) comment: '').
+
+	((interfaceDeclaration property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #interfaceDeclarationTypeParametersOwner) comment: '').
+
+
+	" INTERNAL_MODULE "
+	((internalModule property: #name) comment: '')
+		<>- ((tEntity property: #internalModuleNameOwner) comment: '').
+
+	((internalModule property: #body) comment: '')
+		<>- ((statementBlock property: #internalModuleBodyOwner) comment: '').
+
+
+	" INTERSECTION_TYPE (COLLECTION) "
+	((intersectionType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #intersectionTypeOwner) comment: '').
+
+
+	" LABELED_STATEMENT "
+	((labeledStatement property: #label) comment: '')
+		<>- ((statementIdentifier property: #labeledStatementLabelOwner) comment: '').
+
+	((labeledStatement property: #body) comment: '')
+		<>- ((tStatement property: #labeledStatementBodyOwner) comment: '').
+
+
+	" LEXICAL_DECLARATION "
+	((lexicalDeclaration property: #kind) comment: '')
+		<>- ((tEntity property: #lexicalDeclarationKindOwner) comment: '').
+
+
+	" LOOKUP_TYPE (COLLECTION) "
+	((lookupType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #lookupTypeOwner) comment: '').
+
+
+	" MAPPED_TYPE_CLAUSE "
+	((mappedTypeClause property: #alias) comment: '')
+		<>- ((tType property: #mappedTypeClauseAliasOwner) comment: '').
+
+	((mappedTypeClause property: #name) comment: '')
+		<>- ((typeIdentifier property: #mappedTypeClauseNameOwner) comment: '').
+
+	((mappedTypeClause property: #type) comment: '')
+		<>- ((tType property: #mappedTypeClauseTypeOwner) comment: '').
+
+
+	" MEMBER_EXPRESSION "
+	((memberExpression property: #property) comment: '')
+		<>- ((tEntity property: #memberExpressionPropertyOwner) comment: '').
+
+	((memberExpression property: #object) comment: '')
+		<>- ((tEntity property: #memberExpressionObjectOwner) comment: '').
+
+	((memberExpression property: #optionalChain) comment: '')
+		<>- ((optionalChain property: #memberExpressionOptionalChainOwner) comment: '').
+
+
+	" METHOD_DEFINITION "
+	((methodDefinition property: #parameters) comment: '')
+		<>- ((formalParameters property: #methodDefinitionParametersOwner) comment: '').
+
+	((methodDefinition property: #body) comment: '')
+		<>- ((statementBlock property: #methodDefinitionBodyOwner) comment: '').
+
+	((methodDefinition property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #methodDefinitionTypeParametersOwner) comment: '').
+
+	((methodDefinition property: #returnType) comment: '')
+		<>- ((tEntity property: #methodDefinitionReturnTypeOwner) comment: '').
+
+	((methodDefinition property: #name) comment: '')
+		<>- ((tEntity property: #methodDefinitionNameOwner) comment: '').
+
+
+	" METHOD_SIGNATURE "
+	((methodSignature property: #returnType) comment: '')
+		<>- ((tEntity property: #methodSignatureReturnTypeOwner) comment: '').
+
+	((methodSignature property: #name) comment: '')
+		<>- ((tEntity property: #methodSignatureNameOwner) comment: '').
+
+	((methodSignature property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #methodSignatureTypeParametersOwner) comment: '').
+
+	((methodSignature property: #parameters) comment: '')
+		<>- ((formalParameters property: #methodSignatureParametersOwner) comment: '').
+
+
+	" MODULE "
+	((module property: #name) comment: '')
+		<>- ((tEntity property: #moduleNameOwner) comment: '').
+
+	((module property: #body) comment: '')
+		<>- ((statementBlock property: #moduleBodyOwner) comment: '').
+
+
+	" NAMED_IMPORTS (COLLECTION) "
+	((namedImports property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #namedImportsOwner) comment: '').
+
+
+	" NESTED_IDENTIFIER "
+	((nestedIdentifier property: #property) comment: '')
+		<>- ((propertyIdentifier property: #nestedIdentifierPropertyOwner) comment: '').
+
+	((nestedIdentifier property: #object) comment: '')
+		<>- ((tEntity property: #nestedIdentifierObjectOwner) comment: '').
+
+
+	" NESTED_TYPE_IDENTIFIER "
+	((nestedTypeIdentifier property: #name) comment: '')
+		<>- ((typeIdentifier property: #nestedTypeIdentifierNameOwner) comment: '').
+
+	((nestedTypeIdentifier property: #module) comment: '')
+		<>- ((tEntity property: #nestedTypeIdentifierModuleOwner) comment: '').
+
+
+	" NEW_EXPRESSION "
+	((newExpression property: #typeArguments) comment: '')
+		<>- ((typeArguments property: #newExpressionTypeArgumentsOwner) comment: '').
+
+	((newExpression property: #constructor) comment: '')
+		<>- ((tPrimaryExpression property: #newExpressionConstructorOwner) comment: '').
+
+	((newExpression property: #arguments) comment: '')
+		<>- ((arguments property: #newExpressionArgumentsOwner) comment: '').
+
+
+	" OBJECT (COLLECTION) "
+	((object property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #objectOwner) comment: '').
+
+
+	" OBJECT_ASSIGNMENT_PATTERN "
+	((objectAssignmentPattern property: #right) comment: '')
+		<>- ((tExpression property: #objectAssignmentPatternRightOwner) comment: '').
+
+	((objectAssignmentPattern property: #left) comment: '')
+		<>- ((tEntity property: #objectAssignmentPatternLeftOwner) comment: '').
+
+
+	" OBJECT_PATTERN (COLLECTION) "
+	((objectPattern property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #objectPatternOwner) comment: '').
+
+
+	" OBJECT_TYPE (COLLECTION) "
+	((objectType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #objectTypeOwner) comment: '').
+
+
+	" OPTIONAL_PARAMETER "
+	((optionalParameter property: #value) comment: '')
+		<>- ((tExpression property: #optionalParameterValueOwner) comment: '').
+
+	((optionalParameter property: #pattern) comment: '')
+		<>- ((tEntity property: #optionalParameterPatternOwner) comment: '').
+
+	((optionalParameter property: #decorator) comment: '')
+		<>-* ((decorator property: #optionalParameterDecoratorOwner) comment: '').
+
+	((optionalParameter property: #name) comment: '')
+		<>- ((identifier property: #optionalParameterNameOwner) comment: '').
+
+	((optionalParameter property: #type) comment: '')
+		<>- ((typeAnnotation property: #optionalParameterTypeOwner) comment: '').
+
+
+	" PAIR "
+	((pair property: #key) comment: '')
+		<>- ((tEntity property: #pairKeyOwner) comment: '').
+
+	((pair property: #value) comment: '')
+		<>- ((tExpression property: #pairValueOwner) comment: '').
+
+
+	" PAIR_PATTERN "
+	((pairPattern property: #key) comment: '')
+		<>- ((tEntity property: #pairPatternKeyOwner) comment: '').
+
+	((pairPattern property: #value) comment: '')
+		<>- ((tEntity property: #pairPatternValueOwner) comment: '').
+
+
+	" PARENTHESIZED_EXPRESSION "
+	((parenthesizedExpression property: #type) comment: '')
+		<>- ((typeAnnotation property: #parenthesizedExpressionTypeOwner) comment: '').
+
+
+	" PROGRAM (COLLECTION) "
+	((program property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #programOwner) comment: '').
+
+
+	" PROPERTY_SIGNATURE "
+	((propertySignature property: #name) comment: '')
+		<>- ((tEntity property: #propertySignatureNameOwner) comment: '').
+
+	((propertySignature property: #type) comment: '')
+		<>- ((typeAnnotation property: #propertySignatureTypeOwner) comment: '').
+
+
+	" PUBLIC_FIELD_DEFINITION "
+	((publicFieldDefinition property: #decorator) comment: '')
+		<>-* ((decorator property: #publicFieldDefinitionDecoratorOwner) comment: '').
+
+	((publicFieldDefinition property: #name) comment: '')
+		<>- ((tEntity property: #publicFieldDefinitionNameOwner) comment: '').
+
+	((publicFieldDefinition property: #value) comment: '')
+		<>- ((tExpression property: #publicFieldDefinitionValueOwner) comment: '').
+
+	((publicFieldDefinition property: #type) comment: '')
+		<>- ((typeAnnotation property: #publicFieldDefinitionTypeOwner) comment: '').
+
+
+	" REGEX "
+	((regex property: #flags) comment: '')
+		<>- ((regexFlags property: #regexFlagsOwner) comment: '').
+
+	((regex property: #pattern) comment: '')
+		<>- ((regexPattern property: #regexPatternOwner) comment: '').
+
+
+	" REQUIRED_PARAMETER "
+	((requiredParameter property: #value) comment: '')
+		<>- ((tExpression property: #requiredParameterValueOwner) comment: '').
+
+	((requiredParameter property: #pattern) comment: '')
+		<>- ((tEntity property: #requiredParameterPatternOwner) comment: '').
+
+	((requiredParameter property: #decorator) comment: '')
+		<>-* ((decorator property: #requiredParameterDecoratorOwner) comment: '').
+
+	((requiredParameter property: #name) comment: '')
+		<>- ((tEntity property: #requiredParameterNameOwner) comment: '').
+
+	((requiredParameter property: #type) comment: '')
+		<>- ((typeAnnotation property: #requiredParameterTypeOwner) comment: '').
+
+
+	" SATISFIES_EXPRESSION (COLLECTION) "
+	((satisfiesExpression property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #satisfiesExpressionOwner) comment: '').
+
+
+	" SEQUENCE_EXPRESSION (COLLECTION) "
+	((sequenceExpression property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #sequenceExpressionOwner) comment: '').
+
+
+	" STATEMENT_BLOCK (COLLECTION) "
+	((statementBlock property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #statementBlockOwner) comment: '').
+
+
+	" STRING (COLLECTION) "
+	((string property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #stringOwner) comment: '').
+
+
+	" SUBSCRIPT_EXPRESSION "
+	((subscriptExpression property: #object) comment: '')
+		<>- ((tExpression property: #subscriptExpressionObjectOwner) comment: '').
+
+	((subscriptExpression property: #index) comment: '')
+		<>- ((tEntity property: #subscriptExpressionIndexOwner) comment: '').
+
+	((subscriptExpression property: #optionalChain) comment: '')
+		<>- ((optionalChain property: #subscriptExpressionOptionalChainOwner) comment: '').
+
+
+	" SWITCH_BODY (COLLECTION) "
+	((switchBody property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #switchBodyOwner) comment: '').
+
+
+	" SWITCH_CASE "
+	((switchCase property: #value) comment: '')
+		<>- ((tEntity property: #switchCaseValueOwner) comment: '').
+
+	((switchCase property: #body) comment: '')
+		<>-* ((tStatement property: #switchCaseBodyOwner) comment: '').
+
+
+	" SWITCH_DEFAULT "
+	((switchDefault property: #body) comment: '')
+		<>-* ((tStatement property: #switchDefaultBodyOwner) comment: '').
+
+
+	" SWITCH_STATEMENT "
+	((switchStatement property: #value) comment: '')
+		<>- ((parenthesizedExpression property: #switchStatementValueOwner) comment: '').
+
+	((switchStatement property: #body) comment: '')
+		<>- ((switchBody property: #switchStatementBodyOwner) comment: '').
+
+
+	" TEMPLATE_LITERAL_TYPE (COLLECTION) "
+	((templateLiteralType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #templateLiteralTypeOwner) comment: '').
+
+
+	" TEMPLATE_STRING (COLLECTION) "
+	((templateString property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #templateStringOwner) comment: '').
+
+
+	" TERNARY_EXPRESSION "
+	((ternaryExpression property: #condition) comment: '')
+		<>- ((tExpression property: #ternaryExpressionConditionOwner) comment: '').
+
+	((ternaryExpression property: #alternative) comment: '')
+		<>- ((tExpression property: #ternaryExpressionAlternativeOwner) comment: '').
+
+	((ternaryExpression property: #consequence) comment: '')
+		<>- ((tExpression property: #ternaryExpressionConsequenceOwner) comment: '').
+
+
+	" TRY_STATEMENT "
+	((tryStatement property: #finalizer) comment: '')
+		<>- ((finallyClause property: #tryStatementFinalizerOwner) comment: '').
+
+	((tryStatement property: #body) comment: '')
+		<>- ((statementBlock property: #tryStatementBodyOwner) comment: '').
+
+	((tryStatement property: #handler) comment: '')
+		<>- ((catchClause property: #tryStatementHandlerOwner) comment: '').
+
+
+	" TUPLE_TYPE (COLLECTION) "
+	((tupleType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #tupleTypeOwner) comment: '').
+
+
+	" TYPE_ALIAS_DECLARATION "
+	((typeAliasDeclaration property: #name) comment: '')
+		<>- ((typeIdentifier property: #typeAliasDeclarationNameOwner) comment: '').
+
+	((typeAliasDeclaration property: #value) comment: '')
+		<>- ((tType property: #typeAliasDeclarationValueOwner) comment: '').
+
+	((typeAliasDeclaration property: #typeParameters) comment: '')
+		<>- ((typeParameters property: #typeAliasDeclarationTypeParametersOwner) comment: '').
+
+
+	" TYPE_ARGUMENTS (COLLECTION) "
+	((typeArguments property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #typeArgumentsOwner) comment: '').
+
+
+	" TYPE_ASSERTION (COLLECTION) "
+	((typeAssertion property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #typeAssertionOwner) comment: '').
+
+
+	" TYPE_PARAMETER "
+	((typeParameter property: #name) comment: '')
+		<>- ((typeIdentifier property: #typeParameterNameOwner) comment: '').
+
+	((typeParameter property: #constraint) comment: '')
+		<>- ((constraint property: #typeParameterConstraintOwner) comment: '').
+
+	((typeParameter property: #value) comment: '')
+		<>- ((defaultType property: #typeParameterValueOwner) comment: '').
+
+
+	" TYPE_PARAMETERS (COLLECTION) "
+	((typeParameters property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #typeParametersOwner) comment: '').
+
+
+	" TYPE_PREDICATE "
+	((typePredicate property: #name) comment: '')
+		<>- ((tPrimaryExpression property: #typePredicateNameOwner) comment: '').
+
+	((typePredicate property: #type) comment: '')
+		<>- ((tType property: #typePredicateTypeOwner) comment: '').
+
+
+	" UNARY_EXPRESSION "
+	((unaryExpression property: #argument) comment: '')
+		<>- ((tExpression property: #unaryExpressionArgumentOwner) comment: '').
+
+	((unaryExpression property: #operator) comment: '')
+		<>- ((tEntity property: #unaryExpressionOperatorOwner) comment: '').
+
+
+	" UNION_TYPE (COLLECTION) "
+	((unionType property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #unionTypeOwner) comment: '').
+
+
+	" UPDATE_EXPRESSION "
+	((updateExpression property: #argument) comment: '')
+		<>- ((tExpression property: #updateExpressionArgumentOwner) comment: '').
+
+	((updateExpression property: #operator) comment: '')
+		<>- ((tEntity property: #updateExpressionOperatorOwner) comment: '').
+
+
+	" VARIABLE_DECLARATION (COLLECTION) "
+	((variableDeclaration property: #childrenNodes) comment: '')
+		<>-* ((tEntity property: #variableDeclarationOwner) comment: '').
+
+
+	" VARIABLE_DECLARATOR "
+	((variableDeclarator property: #name) comment: '')
+		<>- ((tEntity property: #variableDeclaratorNameOwner) comment: '').
+
+	((variableDeclarator property: #value) comment: '')
+		<>- ((tExpression property: #variableDeclaratorValueOwner) comment: '').
+
+	((variableDeclarator property: #type) comment: '')
+		<>- ((typeAnnotation property: #variableDeclaratorTypeOwner) comment: '').
+
+
+	" WHILE_STATEMENT "
+	((whileStatement property: #condition) comment: '')
+		<>- ((parenthesizedExpression property: #whileStatementConditionOwner) comment: '').
+
+	((whileStatement property: #body) comment: '')
+		<>- ((tStatement property: #whileStatementBodyOwner) comment: '').
+
+
+	" WITH_STATEMENT "
+	((withStatement property: #object) comment: '')
+		<>- ((parenthesizedExpression property: #withStatementObjectOwner) comment: '').
+
+	((withStatement property: #body) comment: '')
+		<>- ((tStatement property: #withStatementBodyOwner) comment: '').
+
+
 ]
 
 { #category : 'definition' }
 FASTTypeScriptMetamodelGenerator >> defineTraits [
-
 	super defineTraits.
-
-	tDeclaration := self
-		                newTraitNamed: #TDeclaration
-		                comment: 'I am a declaration in Typescript'.
-	tWithDeclarations := self
-		                     newTraitNamed: #TWithDeclarations
-		                     comment: 'I have declarations'.
-
-	tModifier := self
-		             newTraitNamed: #TModifier
-		             comment: 'I am a modifier'.
-	tWithModifiers := self
-		                  newTraitNamed: #TWithModifiers
-		                  comment: 'I have modifiers'.
-
 	"From FAST"
 	tEntity := self remoteTrait: #TEntity withPrefix: #FAST.
-	tWithComments := self remoteTrait: #TWithComments withPrefix: #FAST.
-	tStatement := self remoteTrait: #TStatement withPrefix: #FAST.
-	tNamedEntity := self remoteTrait: #TNamedEntity withPrefix: #FAST.
-	tLiteral := self remoteTrait: #TLiteral withPrefix: #FAST.
-	tExpression := self remoteTrait: #TExpression withPrefix: #FAST. 	
-	tWithParameters := self remoteTrait: #TWithParameters withPrefix: #FAST.
-	tReturnType := self newTraitNamed: #TReturnType comment: 'I am a Return Type in Typescript'.
-	tOptionalField := self newTraitNamed: #TOptionalField comment: 'I represent optional field in Typescript'.
-
-
-
+	tDeclaration := builder newTraitNamed: #TDeclaration.
+	tExpression := builder newTraitNamed: #TExpression.
+	tPattern := builder newTraitNamed: #TPattern.
+	tPrimaryExpression := builder newTraitNamed: #TPrimaryExpression.
+	tPrimaryType := builder newTraitNamed: #TPrimaryType.
+	tStatement := builder newTraitNamed: #TStatement.
+	tType := builder newTraitNamed: #TType.
 ]

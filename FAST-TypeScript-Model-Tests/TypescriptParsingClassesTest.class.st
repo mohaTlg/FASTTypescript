@@ -49,10 +49,10 @@ TypeScriptParsingClassesTest >> testParsingArray [
 
 	string := '[, a, , b, , , , s, , , ]'.
 	res := parser parse: string.
-
+	self halt .
 	"Checking if FASTTypescriptArray parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptArray) isNotEmpty.
+		(res allWithType: FASTTypeScriptArray) isNotEmpty.
 	
 	
 	 
@@ -70,7 +70,7 @@ const miscArray: ?T[];'.
 
 	"Checking if FASTTypescriptArray_type parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptArray_type) isNotEmpty.
+		(res allWithType: FASTTypeScriptArrayType ) isNotEmpty.
 ]
 
 { #category : 'tests' }
@@ -88,6 +88,7 @@ TypeScriptParsingClassesTest >> testParsingArrowFunction [
 	
 	node := (res allWithType: FASTTypeScriptArrowFunction ) first.
 	secondNode := (res allWithType: FASTTypeScriptArrowFunction ) second.
+	
 	
 	self assert: node parameter sourceCode equals: 'x'.
 	self assert: node body sourceCode equals: 'x * 2'. 
@@ -123,12 +124,12 @@ TypeScriptParsingClassesTest >> testParsingAugmentedAssignmentExpression [
 
 	"Checking if FASTTypescriptAugmented_assignment_expression parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptAugmented_assignment_expression) isNotEmpty.
+		(res allWithType: FASTTypeScriptAugmentedAssignmentExpression) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptAugmented_assignment_expression"	
-	node := (res allWithType: FASTTypescriptAugmented_assignment_expression) first.
-	self assert: node left class equals: FASTTypescriptNon_null_expression.
-	self assert: node right class equals: FASTTypescriptIdentifier.
+	node := (res allWithType: FASTTypeScriptAugmentedAssignmentExpression) first.
+	self assert: node left class equals: FASTTypeScriptNonNullExpression.
+	self assert: node right class equals: FASTTypeScriptIdentifier.
 ]
 
 { #category : 'tests' }
@@ -141,12 +142,12 @@ TypeScriptParsingClassesTest >> testParsingBinaryExpression [
 
 	"Checking if FASTTypescriptBinary_expression parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptBinary_expression) isNotEmpty.
+		(res allWithType: FASTTypeScriptBinaryExpression ) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptBinary_expression"	
-	node := (res allWithType: FASTTypescriptBinary_expression) first.
-	self assert: node right class equals: FASTTypescriptNumber.
-	self assert: node left class equals: FASTTypescriptIdentifier.
+	node := (res allWithType: FASTTypeScriptBinaryExpression) first.
+	self assert: node right class equals: FASTTypeScriptNumber .
+	self assert: node left class equals: FASTTypeScriptIdentifier.
 ]
 
 { #category : 'tests' }
@@ -159,12 +160,12 @@ TypeScriptParsingClassesTest >> testParsingClassDeclaration [
 
 	"Checking if FASTTypescriptClass_declaration parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptClass_declaration) isNotEmpty.
+		(res allWithType: FASTTypeScriptClassDeclaration ) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptClass_declaration"	
-	node := (res allWithType: FASTTypescriptClass_declaration) first.
-	self assert: node name class equals: FASTTypescriptType_identifier.
-	self assert: node body class equals: FASTTypescriptClass_body.
+	node := (res allWithType: FASTTypeScriptClassDeclaration) first.
+	self assert: node name class equals: FASTTypeScriptTypeIdentifier .
+	self assert: node body class equals: FASTTypeScriptClassBody .
 ]
 
 { #category : 'tests' }
@@ -179,7 +180,7 @@ TypeScriptParsingClassesTest >> testParsingClassHeritage [
 
 	"Checking if FASTTypescriptClass_heritage parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptClass_heritage) isNotEmpty. 
+		(res allWithType: FASTTypeScriptClassHeritage ) isNotEmpty. 
 ]
 
 { #category : 'tests' }
@@ -192,14 +193,14 @@ TypeScriptParsingClassesTest >> testParsingConditionalType [
 
 	"Checking if FASTTypescriptConditional_type parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptConditional_type) isNotEmpty.
+		(res allWithType: FASTTypeScriptConditionalType ) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptConditional_type"	
-	node := (res allWithType: FASTTypescriptConditional_type) first.
-	self assert: node right class equals: FASTTypescriptParenthesized_type.
-	self assert: node left class equals: FASTTypescriptParenthesized_type.
-	self assert: node consequence class equals: FASTTypescriptType_identifier.
-	self assert: node alternative class equals: FASTTypescriptType_identifier.
+	node := (res allWithType: FASTTypeScriptConditionalType) first.
+	self assert: node right class equals: FASTTypeScriptParenthesizedType .
+	self assert: node left class equals: FASTTypeScriptParenthesizedType.
+	self assert: node consequence class equals: FASTTypeScriptTypeIdentifier .
+	self assert: node alternative class equals: FASTTypeScriptTypeIdentifier.
 ]
 
 { #category : 'tests' }
@@ -485,12 +486,12 @@ TypeScriptParsingClassesTest >> testParsingFunctionType [
 
 	"Checking if FASTTypescriptFunction_type parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptFunction_type) isNotEmpty.
+		(res allWithType: FASTTypeScriptFunctionType ) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptFunction_type"
-	forNode := (res allWithType: FASTTypescriptFunction_type) first.
-	self assert: forNode return_type class equals: FASTTypescriptPredefined_type.
-	self assert: forNode parameters class equals: FASTTypescriptFormal_parameters.
+	forNode := (res allWithType: FASTTypeScriptFunctionType) first.
+	self assert: forNode return_type class equals: FASTTypeScriptPredefinedType .
+	self assert: forNode parameters class equals: FASTTypeScriptFormalParameters .
 	
 ]
 
@@ -530,12 +531,12 @@ TypeScriptParsingClassesTest >> testParsingIfStatement [
 
 	"Checking if FASTTypescriptIf_statement parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptIf_statement) isNotEmpty.
+		(res allWithType: FASTTypeScriptIfStatement) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptIf_statement"	
-	node := (res allWithType: FASTTypescriptIf_statement) first.
-	self assert: node condition class equals: FASTTypescriptParenthesized_expression.
-	self assert: node consequence class equals: FASTTypescriptStatement_block .
+	node := (res allWithType: FASTTypeScriptIfStatement) first.
+	self assert: node condition class equals: FASTTypeScriptParenthesizedExpression.
+	self assert: node consequence class equals: FASTTypeScriptStatementBlock .
 	self assert: node alternative class equals: FASTTypeScriptElseClause .
 ]
 
@@ -553,10 +554,9 @@ export class A extends B<C>(D)<E> implements C {}
 export class A extends B<C, D> implements C {}'.
 	
 	res := parser parse: string.
-
 	"Checking if FASTTypescriptType_predicate_annotation parsed correctly"
 	self assert:
-		(res allWithType: FASTTypescriptImplements_clause) isNotEmpty.
+		(res allWithType: FASTTypeScriptImplementsClause ) isNotEmpty.
 ]
 
 { #category : 'tests' }
@@ -605,13 +605,13 @@ TypeScriptParsingClassesTest >> testParsingIndexSignature [
 
 	"Checking if FASTTypescriptIndex_signature parsed correctly"
 	self assert: 
-		(res allWithType: FASTTypescriptIndex_signature) isNotEmpty.
+		(res allWithType: FASTTypeScriptIndexSignature) isNotEmpty.
 	
 	"Checking properties of FASTTypescriptFor_in_statement"
-	forNode := (res allWithType: FASTTypescriptIndex_signature) first.
-	self assert: forNode index_type class equals: FASTTypescriptType_identifier.
-	self assert: forNode type class equals: FASTTypescriptType_annotation.
-	self assert: forNode name class equals: FASTTypescriptIdentifier.
+	forNode := (res allWithType: FASTTypeScriptIndexSignature) first.
+	self assert: forNode index_type class equals: FASTTypeScriptTypeIdentifier.
+	self assert: forNode type class equals: FASTTypeScriptTypeAnnotation.
+	self assert: forNode name class equals: FASTTypeScriptIdentifier.
 	
 ]
 
