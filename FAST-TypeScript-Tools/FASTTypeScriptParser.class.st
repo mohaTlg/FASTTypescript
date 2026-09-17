@@ -130,17 +130,14 @@ FASTTypeScriptParser >> getASTFromString: string [
 { #category : 'as yet unclassified' }
 FASTTypeScriptParser >> importToFAST: tsTree usingSourceCode: aString [
 
-	| tsLanguage importer |
+	| importer |
 	
 	"needs cleaning"
-	
-	tsLanguage := TSLanguage typescript.
 	importer := FASTTypeScriptCustomImporter new.
-	importer tsLanguage: tsLanguage.
 	importer languageName: 'TypeScript'.
 	importer originString: aString. 
 	
-	^ importer import: tsTree .
+	^ importer import: tsTree.
 ]
 
 { #category : 'as yet unclassified' }
